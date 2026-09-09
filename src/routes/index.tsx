@@ -420,7 +420,7 @@ function Landing() {
               className="rounded-3xl border border-border bg-cream p-6 shadow-soft transition-transform duration-200 hover:-translate-y-1"
             >
               <span
-                className={`grid h-12 w-12 place-items-center rounded-2xl ${toneMap[tone] ?? toneMap.sky}`}
+                className={`grid h-12 w-12 place-items-center rounded-2xl ${toneMap[tone] ?? toneMap["sky"]}`}
               >
                 <Icon className="h-6 w-6" />
               </span>
