@@ -40,7 +40,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Más de 100 actividades imprimibles para estimular la atención, la memoria y el razonamiento de niños de 3 a 14 años. Descarga digital por R$ 9,90.",
+          "Más de 100 actividades imprimibles para estimular la atención, la memoria y el razonamiento de niños de 3 a 14 años. Descarga digital por US$ 9,90.",
       },
       { property: "og:title", content: "ActivaMente Kids — Sistema de Enfoque" },
       {
@@ -164,12 +164,12 @@ const faqs = [
     a: "Puedes imprimirlas en casa o en cualquier copistería, en hojas comunes tamaño carta o A4. También puedes usarlas en una tablet con una app de escritura, si prefieres no imprimir.",
   },
   {
-    q: "¿Qué incluye exactamente por R$ 9,90?",
+    q: "¿Qué incluye exactamente por US$ 9,90?",
     a: "Incluye el sistema ActivaMente Kids completo: más de 100 actividades imprimibles para edades de 3 a 14 años, organizadas por habilidad, con acceso inmediato tras la compra.",
   },
   {
     q: "¿Los materiales complementarios están incluidos?",
-    a: "No. Los 8 materiales complementarios son opcionales y se adquieren por separado, a R$ 3,90 cada uno. El sistema principal funciona perfectamente por sí solo.",
+    a: "Sí. Los 8 materiales complementarios están incluidos como bonos, sin costo adicional, junto con el sistema principal ActivaMente Kids.",
   },
   {
     q: "¿Sirve para varios niños?",
@@ -597,7 +597,7 @@ function Landing() {
       <section className="px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-3xl rounded-[2rem] bg-white p-7 shadow-card sm:p-10">
           <h2 className="text-center text-2xl leading-tight font-extrabold sm:text-3xl">
-            Todo esto por solo R$ 9,90
+            Todo esto por solo US$ 9,90
           </h2>
           <ul className="mt-7 space-y-3">
             {[
@@ -618,7 +618,7 @@ function Landing() {
           </ul>
 
           <div className="mt-8 flex flex-col items-center">
-            <p className="font-display text-5xl font-extrabold text-brand">R$ 9,90</p>
+            <p className="font-display text-5xl font-extrabold text-brand">US$ 9,90</p>
             <p className="mt-1 text-sm font-semibold text-muted-foreground">
               Pago único · producto digital
             </p>
@@ -699,7 +699,7 @@ function Landing() {
             Unos minutos al día, una hoja a la vez, y muchos momentos juntos que valen la pena.
           </p>
           <p className="mt-8 font-display text-5xl font-extrabold text-brand sm:text-6xl">
-            R$ 9,90
+            US$ 9,90
           </p>
           <div className="mt-6 w-full max-w-xl">
             <CtaPrincipal />
