@@ -18,10 +18,12 @@ import {
   Heart,
 } from "lucide-react";
 
-import megaMockup from "@/assets/mega-mockup.jpg";
+import megaMockupAsset from "@/assets/mega-mockup.jpg.asset.json";
 import productoPrincipal from "@/assets/producto-principal.jpg";
 
-const CHECKOUT_PRINCIPAL = "[INSERTAR AQUÍ URL DEL CHECKOUT HOTMART DE ACTIVAMENTE KIDS]";
+const megaMockup = megaMockupAsset.url;
+
+const CHECKOUT_PRINCIPAL = "[URL_CHECKOUT_HOTMART]";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -167,7 +169,7 @@ function CtaPrincipal({ className = "" }: { className?: string }) {
       href={CHECKOUT_PRINCIPAL}
       className={`inline-flex w-full max-w-xl items-center justify-center rounded-full bg-coral px-6 py-4 text-center font-display text-base leading-tight font-extrabold tracking-wide text-white shadow-card transition-transform duration-200 hover:-translate-y-0.5 hover:brightness-105 sm:text-lg ${className}`}
     >
-      QUIERO ACTIVAR SU MENTE POR R$ 9,90
+      QUIERO ACTIVAMENTE KIDS POR US$ 9,90
     </a>
   );
 }
@@ -233,7 +235,7 @@ function FloatingCta() {
         href={CHECKOUT_PRINCIPAL}
         className="flex w-full items-center justify-center rounded-full bg-coral px-4 py-3.5 text-center font-display text-sm leading-tight font-extrabold tracking-wide text-white shadow-card"
       >
-        QUIERO ACTIVAR SU MENTE POR R$ 9,90
+        QUIERO ACTIVAMENTE KIDS POR US$ 9,90
       </a>
     </div>
   );
@@ -255,8 +257,8 @@ function Landing() {
           className="pointer-events-none absolute -top-20 -right-24 h-72 w-72 rounded-full bg-sun-soft blur-3xl"
         />
         <div className="relative mx-auto max-w-4xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-extrabold tracking-wide text-brand shadow-soft sm:text-sm">
-            <Sparkles className="h-4 w-4" /> ActivaMente Kids — Sistema de Enfoque
+          <span className="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-extrabold tracking-wide text-brand shadow-soft sm:text-sm">
+            ActivaMente Kids — Sistema de Enfoque
           </span>
 
           <h1 className="mt-6 text-3xl leading-[1.15] font-extrabold text-balance sm:text-4xl lg:text-5xl">
@@ -282,36 +284,43 @@ function Landing() {
         </div>
 
         {/* MEGA MOCKUP */}
-        <div className="relative mx-auto mt-8 w-[95%] max-w-[750px] sm:mt-10">
-          <div className="rounded-[2rem] bg-white p-3 shadow-card sm:p-5">
-            <img
-              src={megaMockup}
-              alt="Mockup del sistema ActivaMente Kids con actividades imprimibles en tablet, laptop y hojas"
-              width={1600}
-              height={1104}
-              className="h-auto w-full rounded-[1.4rem] object-contain"
-            />
-          </div>
+        <div className="relative mx-auto mt-8 w-[95%] max-w-[750px] min-[900px]:w-[700px] sm:mt-10">
+          <img
+            src={megaMockup}
+            alt="ActivaMente Kids y sus materiales complementarios: portadas de las actividades imprimibles para niños"
+            width={1536}
+            height={1024}
+            className="h-auto w-full object-contain"
+          />
         </div>
 
         <div className="mx-auto mt-8 flex max-w-xl flex-col items-center px-1">
-          <div className="mb-5 flex flex-wrap items-center justify-center gap-2 text-xs font-bold sm:text-sm">
-            <span className="rounded-full bg-sky-soft px-3 py-1.5 text-brand">
-              +100 actividades
+          <div className="mb-5 flex flex-wrap items-center justify-center gap-2 text-xs font-extrabold tracking-wide sm:text-sm">
+            <span className="rounded-full bg-white px-3 py-1.5 text-brand shadow-soft">
+              ACTIVAMENTE KIDS
             </span>
-            <span className="rounded-full bg-leaf-soft px-3 py-1.5 text-leaf">Edades 3–14</span>
+            <span className="rounded-full bg-sky-soft px-3 py-1.5 text-brand">
+              +100 ACTIVIDADES
+            </span>
+            <span className="rounded-full bg-sun-soft px-3 py-1.5 text-coral">
+              PARA NIÑOS DE 3 A 14 AÑOS
+            </span>
             <span className="rounded-full bg-coral-soft px-3 py-1.5 text-coral">
-              Digital imprimible
+              PRODUCTO DIGITAL E IMPRIMIBLE
             </span>
           </div>
 
-          <p className="font-display text-sm font-bold text-muted-foreground">Precio único</p>
-          <p className="font-display text-5xl font-extrabold text-brand sm:text-6xl">R$ 9,90</p>
+          <p className="font-display text-sm font-bold text-muted-foreground">
+            Precio de lanzamiento
+          </p>
+          <p className="font-display text-5xl font-extrabold text-brand sm:text-6xl">US$ 9,90</p>
 
           <div className="mt-6 w-full">
             <CtaPrincipal />
           </div>
-          <MicroTextos />
+          <p className="mt-4 text-center text-xs font-semibold text-muted-foreground sm:text-sm">
+            Acceso digital • Material imprimible • Para niños de 3 a 14 años
+          </p>
         </div>
       </section>
 
