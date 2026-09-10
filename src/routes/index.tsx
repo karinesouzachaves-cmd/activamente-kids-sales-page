@@ -20,6 +20,14 @@ import {
 
 import megaMockupAsset from "@/assets/mega-mockup.jpg.asset.json";
 import productoPrincipal from "@/assets/producto-principal.jpg";
+import bono1 from "@/assets/bono-1.png.asset.json";
+import bono2 from "@/assets/bono-2.png.asset.json";
+import bono3 from "@/assets/bono-3.png.asset.json";
+import bono4 from "@/assets/bono-4.png.asset.json";
+import bono5 from "@/assets/bono-5.png.asset.json";
+import bono6 from "@/assets/bono-6.png.asset.json";
+import bono7 from "@/assets/bono-7.png.asset.json";
+import bono8 from "@/assets/bono-8.png.asset.json";
 
 const megaMockup = megaMockupAsset.url;
 
@@ -32,7 +40,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Más de 100 actividades imprimibles para estimular la atención, la memoria y el razonamiento de niños de 3 a 14 años. Descarga digital por R$ 9,90.",
+          "Más de 100 actividades imprimibles para estimular la atención, la memoria y el razonamiento de niños de 3 a 14 años. Descarga digital por US$ 9,90.",
       },
       { property: "og:title", content: "ActivaMente Kids — Sistema de Enfoque" },
       {
@@ -88,38 +96,61 @@ const habilidades = [
   },
 ];
 
-const complementos = [
+const bonos = [
   {
+    img: bono1.url,
     title: "MI MOMENTO CONSCIENTE",
-    text: "Actividades de respiración, pausa y atención plena para acompañar momentos de agitación con calma.",
+    text: "Actividades para ayudar al niño a descubrir sus emociones, conectar con su cuerpo y observar con más atención el mundo que lo rodea.",
+    benefit:
+      "Favorece el autoconocimiento, la observación y la conciencia de sus emociones y sensaciones.",
   },
   {
+    img: bono2.url,
     title: "CALMA EN ACCIÓN",
-    text: "Recursos visuales y dinámicas simples para ayudar a nombrar emociones y volver al equilibrio.",
+    text: "Actividades para reconocer el enojo, hacer una pausa y practicar estrategias sencillas de autorregulación.",
+    benefit:
+      "Ayuda al niño a reconocer lo que siente y descubrir formas más conscientes de responder a sus emociones.",
   },
   {
+    img: bono3.url,
     title: "MI PEQUEÑO PLANIFICADOR",
-    text: "Rutinas, horarios y listas ilustradas para organizar el día con autonomía y sin discusiones.",
+    text: "Actividades de organización, planificación y rutinas pensadas especialmente para niños.",
+    benefit:
+      "Estimula la organización, la autonomía y la creación de pequeñas rutinas para el día a día.",
   },
   {
+    img: bono4.url,
     title: "MI DIARIO DE FE Y GRATITUD",
-    text: "Páginas para escribir y dibujar aquello que agradece, cultivando una mirada positiva.",
+    text: "Un diario infantil con propuestas de fe, reflexión y gratitud para acompañar pequeños momentos de la rutina.",
+    benefit:
+      "Crea un espacio para expresar pensamientos, reconocer cosas buenas del día y cultivar la gratitud.",
   },
   {
+    img: bono5.url,
     title: "NAVIDAD CREATIVA",
-    text: "Actividades temáticas de Navidad para colorear, crear y compartir en familia.",
+    text: "Actividades lúdicas y creativas para disfrutar, aprender y crear durante la Navidad.",
+    benefit:
+      "Combina creatividad, aprendizaje y diversión a través de actividades inspiradas en la época navideña.",
   },
   {
+    img: bono6.url,
     title: "MI LIBRO DE HOY",
-    text: "Un registro diario donde cuenta cómo fue su día, qué aprendió y cómo se sintió.",
+    text: "Actividades para comprender, imaginar y disfrutar cada lectura de una forma más participativa.",
+    benefit:
+      "Estimula la comprensión, la imaginación y la conexión del niño con lo que está leyendo.",
   },
   {
+    img: bono7.url,
     title: "¡ENCUENTRA AL INTRUSO!",
-    text: "Retos de observación para detectar lo que no encaja y afinar la atención al detalle.",
+    text: "Juegos y desafíos visuales para observar, comparar y descubrir qué elemento no pertenece al grupo.",
+    benefit: "Ejercita la atención, la lógica, la observación y la memoria de una forma divertida.",
   },
   {
+    img: bono8.url,
     title: "LECTORES BRILLANTES",
-    text: "Fichas de lectura y comprensión para acompañar los primeros pasos lectores con confianza.",
+    text: "Actividades para fortalecer la lectura, la comprensión y la confianza mientras el niño practica de forma progresiva y entretenida.",
+    benefit:
+      "Ayuda a practicar habilidades lectoras y de comprensión mediante diferentes tipos de actividades.",
   },
 ];
 
@@ -133,12 +164,12 @@ const faqs = [
     a: "Puedes imprimirlas en casa o en cualquier copistería, en hojas comunes tamaño carta o A4. También puedes usarlas en una tablet con una app de escritura, si prefieres no imprimir.",
   },
   {
-    q: "¿Qué incluye exactamente por R$ 9,90?",
+    q: "¿Qué incluye exactamente por US$ 9,90?",
     a: "Incluye el sistema ActivaMente Kids completo: más de 100 actividades imprimibles para edades de 3 a 14 años, organizadas por habilidad, con acceso inmediato tras la compra.",
   },
   {
     q: "¿Los materiales complementarios están incluidos?",
-    a: "No. Los 8 materiales complementarios son opcionales y se adquieren por separado, a R$ 3,90 cada uno. El sistema principal funciona perfectamente por sí solo.",
+    a: "Sí. Los 8 materiales complementarios están incluidos como bonos, sin costo adicional, junto con el sistema principal ActivaMente Kids.",
   },
   {
     q: "¿Sirve para varios niños?",
@@ -495,42 +526,70 @@ function Landing() {
         </div>
       </section>
 
-      {/* COMPLEMENTOS */}
+      {/* BONOS INCLUIDOS */}
       <section className="bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl leading-tight font-extrabold text-balance sm:text-3xl lg:text-4xl">
-            ¿Quieres llevar la experiencia aún más lejos?
+            Y ESO NO ES TODO…
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Estos son materiales complementarios, opcionales e independientes.
-          </p>
-          <p className="mx-auto mt-5 max-w-2xl rounded-3xl bg-sun-soft px-5 py-4 text-sm leading-relaxed font-bold text-coral sm:text-base">
-            Importante: estos materiales <u>no están incluidos</u> en los R$ 9,90 de ActivaMente
-            Kids. Cada uno se adquiere por separado a R$ 3,90. El sistema principal funciona
-            completo por sí solo.
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            También recibirás materiales complementarios para transformar cada momento en una nueva
+            oportunidad de aprender, descubrir y desarrollar habilidades.
           </p>
         </div>
 
-        <div className="mx-auto mt-10 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {complementos.map((c, i) => (
+        <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-2">
+          {bonos.map((b) => (
             <article
-              key={c.title}
-              className="flex flex-col rounded-3xl border border-border bg-cream p-6 shadow-soft"
+              key={b.title}
+              className="flex flex-col items-center rounded-3xl border border-border bg-cream p-6 text-center shadow-soft"
             >
-              <h3 className="font-display text-base leading-snug font-extrabold text-brand">
-                {c.title}
+              <div className="flex h-56 w-full items-center justify-center sm:h-64">
+                <img
+                  src={b.img}
+                  alt={`Portada del material ${b.title}`}
+                  loading="lazy"
+                  className="h-full w-auto max-w-full object-contain"
+                />
+              </div>
+              <h3 className="mt-5 font-display text-lg leading-snug font-extrabold text-brand">
+                {b.title}
               </h3>
-              <p className="mt-3 grow text-sm leading-relaxed text-muted-foreground">{c.text}</p>
-              <p className="mt-4 font-display text-2xl font-extrabold text-coral">R$ 3,90</p>
-              <a
-                href={`[INSERTAR AQUÍ URL DEL CHECKOUT HOTMART DE ${c.title}]`}
-                className="mt-4 inline-flex items-center justify-center rounded-full border-2 border-coral px-4 py-3 text-center text-sm font-extrabold tracking-wide text-coral transition-colors duration-200 hover:bg-coral hover:text-white"
-              >
-                AÑADIR POR R$ 3,90
-              </a>
-              <span className="sr-only">Material complementario número {i + 1}</span>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{b.text}</p>
+              <p className="mt-4 rounded-2xl bg-sky-soft px-4 py-3 text-sm leading-relaxed font-bold text-brand">
+                {b.benefit}
+              </p>
             </article>
           ))}
+        </div>
+
+        <div className="mx-auto mt-12 max-w-3xl rounded-[2rem] bg-cream p-7 text-center shadow-card sm:p-10">
+          <h3 className="font-display text-xl leading-tight font-extrabold text-balance text-brand sm:text-2xl">
+            TODO ESTO FORMA PARTE DE TU EXPERIENCIA ACTIVAMENTE KIDS
+          </h3>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            {["ActivaMente Kids", "Bonos incluidos", "Acceso digital", "Material imprimible"].map(
+              (item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-left text-sm font-bold shadow-soft sm:text-base"
+                >
+                  <Check className="h-5 w-5 shrink-0 text-leaf" />
+                  {item}
+                </div>
+              ),
+            )}
+          </div>
+
+          <p className="mt-8 font-display text-4xl font-extrabold text-brand sm:text-5xl">
+            US$ 9,90
+          </p>
+          <div className="mt-6 flex justify-center">
+            <CtaPrincipal />
+          </div>
+          <p className="mt-4 text-xs font-semibold text-muted-foreground sm:text-sm">
+            Acceso digital • Material imprimible • Para niños de 3 a 14 años
+          </p>
         </div>
       </section>
 
@@ -538,7 +597,7 @@ function Landing() {
       <section className="px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-3xl rounded-[2rem] bg-white p-7 shadow-card sm:p-10">
           <h2 className="text-center text-2xl leading-tight font-extrabold sm:text-3xl">
-            Todo esto por solo R$ 9,90
+            Todo esto por solo US$ 9,90
           </h2>
           <ul className="mt-7 space-y-3">
             {[
@@ -559,7 +618,7 @@ function Landing() {
           </ul>
 
           <div className="mt-8 flex flex-col items-center">
-            <p className="font-display text-5xl font-extrabold text-brand">R$ 9,90</p>
+            <p className="font-display text-5xl font-extrabold text-brand">US$ 9,90</p>
             <p className="mt-1 text-sm font-semibold text-muted-foreground">
               Pago único · producto digital
             </p>
@@ -640,7 +699,7 @@ function Landing() {
             Unos minutos al día, una hoja a la vez, y muchos momentos juntos que valen la pena.
           </p>
           <p className="mt-8 font-display text-5xl font-extrabold text-brand sm:text-6xl">
-            R$ 9,90
+            US$ 9,90
           </p>
           <div className="mt-6 w-full max-w-xl">
             <CtaPrincipal />
