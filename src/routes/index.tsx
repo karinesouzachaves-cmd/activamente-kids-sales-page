@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 import megaMockupAsset from "@/assets/mega-mockup.jpg.asset.json";
-import productoPrincipal from "@/assets/producto-principal.jpg";
+import capaActiva from "@/assets/capa-activa.jpg.asset.json";
 import bono1 from "@/assets/bono-1.png.asset.json";
 import bono2 from "@/assets/bono-2.png.asset.json";
 import bono3 from "@/assets/bono-3.png.asset.json";
