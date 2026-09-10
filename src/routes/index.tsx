@@ -457,8 +457,11 @@ function Landing() {
 
           {/* Transición a los bonos */}
           <p className="mx-auto mt-12 max-w-2xl rounded-2xl bg-cream px-5 py-4 text-center text-base font-bold text-foreground shadow-card sm:text-lg">
-            <span aria-hidden="true">🎁</span> Y además, recibirás 7 bonos especiales para
-            complementar su aprendizaje.
+            <span aria-hidden="true">🎁</span> Y además, recibirás{" "}
+            <span className="rounded-lg bg-brand/10 px-1.5 py-0.5 font-extrabold text-brand">
+              7 bonos especiales
+            </span>{" "}
+            para complementar su aprendizaje
           </p>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -498,15 +501,18 @@ function Landing() {
                 nombre: "Bono 7 — ¡Encuentra al Intruso!",
                 desc: "Juegos visuales de observación para entrenar la atención, la memoria y el razonamiento lógico, desafiando al niño a observar, pensar y descubrir cuál elemento es diferente.",
               },
-            ].map((b) => (
-              <article key={b.nombre} className="rounded-[1.6rem] bg-white p-4 shadow-card">
+            ].map((b, index) => (
+              <article
+                key={b.nombre}
+                className={`rounded-[1.6rem] bg-white p-3 shadow-card ${index === 6 ? "lg:col-start-2" : ""}`}
+              >
                 <img
                   src={b.img}
                   alt={b.nombre}
                   loading="lazy"
-                  className="mx-auto h-44 w-full object-contain sm:h-52"
+                  className="mx-auto h-60 w-full object-contain sm:h-72"
                 />
-                <h3 className="mt-4 text-base font-extrabold sm:text-lg">
+                <h3 className="mt-3 text-base font-extrabold sm:text-lg">
                   <span aria-hidden="true">🎁</span> {b.nombre}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{b.desc}</p>
