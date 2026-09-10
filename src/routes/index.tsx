@@ -559,35 +559,101 @@ function Landing() {
               <p className="mt-4 rounded-2xl bg-sky-soft px-4 py-3 text-sm leading-relaxed font-bold text-brand">
                 {b.benefit}
               </p>
+              <div className="mt-4 w-full rounded-2xl border border-border bg-white px-4 py-3">
+                <p className="text-sm font-semibold text-muted-foreground">
+                  Valor: <span className="line-through">US$ 3,90</span>
+                </p>
+                <p className="mt-1 text-sm font-semibold text-muted-foreground">
+                  🎁 <strong className="font-bold text-emerald-600">GRATIS</strong> CON ACTIVAMENTE
+                  KIDS
+                </p>
+              </div>
             </article>
           ))}
         </div>
 
-        <div className="mx-auto mt-12 max-w-3xl rounded-[2rem] bg-cream p-7 text-center shadow-card sm:p-10">
-          <h3 className="font-display text-xl leading-tight font-extrabold text-balance text-brand sm:text-2xl">
-            TODO ESTO FORMA PARTE DE TU EXPERIENCIA ACTIVAMENTE KIDS
-          </h3>
-          <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            {["ActivaMente Kids", "Bonos incluidos", "Acceso digital", "Material imprimible"].map(
-              (item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-left text-sm font-bold shadow-soft sm:text-base"
-                >
-                  <Check className="h-5 w-5 shrink-0 text-leaf" />
-                  {item}
-                </div>
-              ),
-            )}
+        {/* TRANSICIÓN / CÁLCULO DE BONOS */}
+        <div className="mx-auto mt-12 max-w-3xl rounded-[2rem] border border-border bg-cream p-7 text-center shadow-card sm:p-10">
+          <span className="inline-flex items-center justify-center rounded-full bg-brand px-5 py-2 font-display text-sm font-extrabold tracking-wide text-white sm:text-base">
+            8 BONOS INCLUIDOS
+          </span>
+          <p className="mt-5 text-sm font-semibold text-muted-foreground sm:text-base">
+            Valor individual de cada bono: US$ 3,90
+          </p>
+          <p className="mt-2 text-base font-bold sm:text-lg">
+            Valor total de los 8 bonos: <span className="line-through">US$ 31,20</span>
+          </p>
+          <p className="mt-4 font-display text-2xl font-extrabold text-emerald-600 sm:text-3xl">
+            🎁 HOY LOS RECIBES GRATIS
+          </p>
+          <p className="mt-3 text-sm font-semibold text-muted-foreground">
+            8 × US$ 3,90 = US$ 31,20
+          </p>
+        </div>
+      </section>
+
+      {/* CIERRE DE LA OFERTA */}
+      <section className="bg-cream px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-2xl leading-tight font-extrabold text-balance sm:text-3xl lg:text-4xl">
+            TODO ESTO PUEDE SER TUYO HOY
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            ActivaMente Kids + 8 bonos para transformar pequeños momentos en nuevas oportunidades de
+            aprender, pensar y divertirse.
+          </p>
+        </div>
+
+        <div className="mx-auto mt-10 flex justify-center">
+          <img
+            src={megaMockup}
+            alt="ActivaMente Kids y sus 8 bonos incluidos"
+            loading="lazy"
+            className="h-auto w-[95%] max-w-[700px] object-contain sm:w-full"
+          />
+        </div>
+
+        <div className="mx-auto mt-10 max-w-2xl rounded-[2rem] bg-white p-7 shadow-card sm:p-10">
+          <div className="flex items-center justify-between gap-4 text-sm font-bold sm:text-base">
+            <span>ACTIVAMENTE KIDS</span>
+            <span>US$ 9,90</span>
+          </div>
+          <p className="my-3 text-center font-display text-xl font-extrabold text-muted-foreground">
+            +
+          </p>
+          <div className="flex items-center justify-between gap-4 text-sm font-bold sm:text-base">
+            <span>8 BONOS (8 × US$ 3,90)</span>
+            <span>US$ 31,20</span>
           </div>
 
-          <p className="mt-8 font-display text-4xl font-extrabold text-brand sm:text-5xl">
+          <hr className="my-6 border-border" />
+
+          <div className="flex items-center justify-between gap-4 text-base font-extrabold sm:text-lg">
+            <span>VALOR TOTAL DEL PACK</span>
+            <span className="line-through">US$ 41,10</span>
+          </div>
+
+          <hr className="my-6 border-border" />
+
+          <p className="text-center text-sm font-bold tracking-wide text-muted-foreground sm:text-base">
+            PERO HOY TE LLEVAS TODO POR SOLO:
+          </p>
+          <p className="mt-2 text-center font-display text-5xl leading-none font-extrabold text-coral sm:text-6xl">
             US$ 9,90
           </p>
-          <div className="mt-6 flex justify-center">
-            <CtaPrincipal />
+          <p className="mt-4 text-center text-xs font-semibold text-muted-foreground sm:text-sm">
+            US$ 9,90 + US$ 31,20 = US$ 41,10
+          </p>
+
+          <div className="mt-7 flex justify-center">
+            <a
+              href={CHECKOUT_PRINCIPAL}
+              className="inline-flex w-full max-w-xl items-center justify-center rounded-full bg-coral px-6 py-5 text-center font-display text-base leading-tight font-extrabold tracking-wide text-white shadow-card transition-transform duration-200 hover:-translate-y-0.5 hover:brightness-105 sm:text-xl"
+            >
+              QUIERO ACTIVAMENTE KIDS + 8 BONOS
+            </a>
           </div>
-          <p className="mt-4 text-xs font-semibold text-muted-foreground sm:text-sm">
+          <p className="mt-4 text-center text-xs font-semibold text-muted-foreground sm:text-sm">
             Acceso digital • Material imprimible • Para niños de 3 a 14 años
           </p>
         </div>
