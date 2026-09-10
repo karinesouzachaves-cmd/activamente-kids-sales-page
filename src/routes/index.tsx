@@ -101,7 +101,6 @@ const habilidades = [
   },
 ];
 
-
 const faqs = [
   {
     q: "¿Es un producto físico o digital?",
@@ -179,18 +178,12 @@ function Faq({ q, a }: { q: string; a: string }) {
         aria-expanded={open}
         className="grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 text-left sm:px-6"
       >
-        <span className="min-w-0 font-display text-base font-bold text-foreground sm:text-lg">
-          {q}
-        </span>
+        <span className="min-w-0 font-display text-base font-bold text-foreground sm:text-lg">{q}</span>
         <ChevronDown
           className={`h-5 w-5 shrink-0 text-brand transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
-      {open && (
-        <p className="px-5 pb-5 text-sm leading-relaxed text-muted-foreground sm:px-6 sm:text-base">
-          {a}
-        </p>
-      )}
+      {open && <p className="px-5 pb-5 text-sm leading-relaxed text-muted-foreground sm:px-6 sm:text-base">{a}</p>}
     </div>
   );
 }
@@ -241,24 +234,17 @@ function Landing() {
           </span>
 
           <h1 className="mt-6 text-3xl leading-[1.15] font-extrabold text-balance sm:text-4xl lg:text-5xl">
-            Convierte{" "}
-            <span className="rounded-xl bg-sun-soft px-2 py-0.5 text-coral">
-              unos minutos al día
-            </span>{" "}
-            en un{" "}
+            Convierte <span className="rounded-xl bg-sun-soft px-2 py-0.5 text-coral">unos minutos al día</span> en un{" "}
             <span className="relative inline-block text-brand">
               entrenamiento divertido para su mente
-              <span
-                aria-hidden
-                className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-sky-soft"
-              />
+              <span aria-hidden className="absolute inset-x-0 -bottom-1 h-2 rounded-full bg-sky-soft" />
             </span>
             .
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Más de 100 actividades para estimular la atención, la memoria, el razonamiento y otras
-            habilidades cognitivas mientras aprende y se divierte.
+            Más de 100 actividades para estimular la atención, la memoria, el razonamiento y otras habilidades
+            cognitivas mientras aprende y se divierte.
           </p>
         </div>
 
@@ -275,20 +261,13 @@ function Landing() {
 
         <div className="mx-auto mt-8 flex max-w-xl flex-col items-center px-1">
           <div className="mb-5 flex flex-wrap items-center justify-center gap-2 text-xs font-extrabold tracking-wide sm:text-sm">
-            <span className="rounded-full bg-white px-3 py-1.5 text-brand shadow-soft">
-              ActivaMente Kids
-            </span>
-            <span className="rounded-full bg-sky-soft px-3 py-1.5 text-brand">
-              +100 ACTIVIDADES
-            </span>
-            <span className="rounded-full bg-sun-soft px-3 py-1.5 text-coral">
-              PARA NIÑOS DE 3 A 14 AÑOS
-            </span>
+            <span className="rounded-full bg-white px-3 py-1.5 text-brand shadow-soft">ActivaMente Kids</span>
+            <span className="rounded-full bg-sky-soft px-3 py-1.5 text-brand">+100 ACTIVIDADES</span>
+            <span className="rounded-full bg-sun-soft px-3 py-1.5 text-coral">PARA NIÑOS DE 3 A 14 AÑOS</span>
             <span className="rounded-full bg-coral-soft px-3 py-1.5 text-coral">
               MATERIAL DIGITAL LISTO PARA IMPRIMIR
             </span>
           </div>
-
         </div>
       </section>
 
@@ -327,18 +306,11 @@ function Landing() {
               t: "Y muchas veces la pantalla termina siendo la opción más fácil para mantenerlo entretenido.",
             },
           ].map(({ Icon, bg, fg, t }) => (
-            <div
-              key={t}
-              className="flex items-start gap-3 rounded-3xl bg-cream p-5 text-left shadow-soft"
-            >
-              <span
-                className={`mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-full ${bg} ${fg}`}
-              >
+            <div key={t} className="flex items-start gap-3 rounded-3xl bg-cream p-5 text-left shadow-soft">
+              <span className={`mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-full ${bg} ${fg}`}>
                 <Icon className="h-5 w-5" strokeWidth={2} />
               </span>
-              <p className="min-w-0 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                {t}
-              </p>
+              <p className="min-w-0 text-sm leading-relaxed text-muted-foreground sm:text-base">{t}</p>
             </div>
           ))}
         </div>
@@ -346,17 +318,16 @@ function Landing() {
         {/* MENSAJE DE VALOR */}
         <div className="mx-auto mt-12 max-w-3xl text-center">
           <p className="text-xl leading-snug font-extrabold text-balance sm:text-2xl lg:text-3xl">
-            Más de 100 actividades creadas para estimular la{" "}
-            <span className="font-extrabold text-brand">atención</span>, la{" "}
-            <span className="font-extrabold text-coral">concentración</span>, la{" "}
+            Más de 100 actividades creadas para estimular la <span className="font-extrabold text-brand">atención</span>
+            , la <span className="font-extrabold text-coral">concentración</span>, la{" "}
             <span className="font-extrabold text-brand">memoria</span>, el{" "}
-            <span className="font-extrabold text-coral">razonamiento lógico</span>, la coordinación
-            motora fina, la asociación, las secuencias, las formas y los patrones.
+            <span className="font-extrabold text-coral">razonamiento lógico</span>, la coordinación motora fina, la
+            asociación, las secuencias, las formas y los patrones.
           </p>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Todo ello a través de actividades pensadas para ayudar al niño a mantener la atención
-            por más tiempo, involucrarse en lo que está haciendo, seguir instrucciones y avanzar en
-            cada nuevo desafío sin perder el interés tan fácilmente.
+            Todo ello a través de actividades pensadas para ayudar al niño a mantener la atención por más tiempo,
+            involucrarse en lo que está haciendo, seguir instrucciones y avanzar en cada nuevo desafío sin perder el
+            interés tan fácilmente.
           </p>
         </div>
 
@@ -375,7 +346,6 @@ function Landing() {
             Descarga digital • Imprime y utiliza las actividades
           </p>
         </div>
-
       </section>
 
       {/* SOLUCIÓN */}
@@ -396,9 +366,9 @@ function Landing() {
                 <span aria-hidden="true">⭐</span> ActivaMente Kids — +100 actividades
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                Actividades para estimular la atención, la concentración, la memoria, el
-                razonamiento lógico, las secuencias, los patrones, la asociación, la coordinación
-                motora fina y otras habilidades importantes para el aprendizaje.
+                Actividades para estimular la atención, la concentración, la memoria, el razonamiento lógico, las
+                secuencias, los patrones, la asociación, la coordinación motora fina y otras habilidades importantes
+                para el aprendizaje.
               </p>
             </div>
           </div>
@@ -406,9 +376,7 @@ function Landing() {
           {/* Transición a los bonos */}
           <p className="mx-auto mt-12 max-w-2xl rounded-2xl bg-cream px-5 py-4 text-center text-base font-bold text-foreground shadow-card sm:text-lg">
             <span aria-hidden="true">🎁</span> Y además, recibirás{" "}
-            <span className="rounded-lg bg-brand/10 px-1.5 py-0.5 font-extrabold text-brand">
-              7 bonos especiales
-            </span>{" "}
+            <span className="rounded-lg bg-brand/10 px-1.5 py-0.5 font-extrabold text-brand">7 bonos especiales</span>{" "}
             para complementar su aprendizaje
           </p>
 
@@ -454,12 +422,7 @@ function Landing() {
                 key={b.nombre}
                 className={`rounded-[1.6rem] bg-white p-3 shadow-card ${index === 6 ? "lg:col-start-2" : ""}`}
               >
-                <img
-                  src={b.img}
-                  alt={b.nombre}
-                  loading="lazy"
-                  className="mx-auto h-60 w-full object-contain sm:h-72"
-                />
+                <img src={b.img} alt={b.nombre} loading="lazy" className="mx-auto h-60 w-full object-contain sm:h-72" />
                 <h3 className="mt-3 text-base font-extrabold sm:text-lg">
                   <span aria-hidden="true">🎁</span> {b.nombre}
                 </h3>
@@ -490,8 +453,8 @@ function Landing() {
             Todo listo para imprimir, usar y disfrutar 💛
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Recibes todo el material en formato digital, con acceso inmediato después de la compra y
-            la libertad de imprimir las actividades todas las veces que quieras.
+            Recibes todo el material en formato digital, con acceso inmediato después de la compra y la libertad de
+            imprimir las actividades todas las veces que quieras.
           </p>
         </div>
 
@@ -584,37 +547,6 @@ function Landing() {
         </div>
       </section>
 
-
-      {/* HABILIDADES */}
-      <section className="bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl leading-tight font-extrabold text-balance sm:text-3xl lg:text-4xl">
-            Seis habilidades que se entrenan jugando
-          </h2>
-          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-            Cada actividad tiene una intención clara detrás del juego.
-          </p>
-        </div>
-
-        <div className="mx-auto mt-10 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {habilidades.map(({ icon: Icon, title, text, tone }) => (
-            <article
-              key={title}
-              className="rounded-3xl border border-border bg-cream p-6 shadow-soft transition-transform duration-200 hover:-translate-y-1"
-            >
-              <span
-                className={`grid h-12 w-12 place-items-center rounded-2xl ${toneMap[tone] ?? toneMap["sky"]}`}
-              >
-                <Icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-4 text-lg font-bold">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-
       {/* TIEMPO */}
       <section className="px-4 pb-14 sm:px-6 sm:pb-20">
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-sky-soft px-6 py-12 text-center shadow-soft sm:px-12">
@@ -622,8 +554,8 @@ function Landing() {
             Menos tiempo buscando qué hacer. Más momentos para aprender y compartir.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-foreground/80 sm:text-lg">
-            Todo está listo y ordenado: abres, eliges e imprimes. El tiempo que antes se iba
-            buscando ideas ahora se queda con quien más importa.
+            Todo está listo y ordenado: abres, eliges e imprimes. El tiempo que antes se iba buscando ideas ahora se
+            queda con quien más importa.
           </p>
         </div>
       </section>
@@ -635,8 +567,8 @@ function Landing() {
             TODO ESTO PUEDE SER TUYO HOY
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            ActivaMente Kids + 8 bonos para transformar pequeños momentos en nuevas oportunidades de
-            aprender, pensar y divertirse.
+            ActivaMente Kids + 8 bonos para transformar pequeños momentos en nuevas oportunidades de aprender, pensar y
+            divertirse.
           </p>
         </div>
 
@@ -654,9 +586,7 @@ function Landing() {
             <span>ACTIVAMENTE KIDS</span>
             <span>US$ 9,90</span>
           </div>
-          <p className="my-3 text-center font-display text-xl font-extrabold text-muted-foreground">
-            +
-          </p>
+          <p className="my-3 text-center font-display text-xl font-extrabold text-muted-foreground">+</p>
           <div className="flex items-center justify-between gap-4 text-sm font-bold sm:text-base">
             <span>8 BONOS (8 × US$ 3,90)</span>
             <span>US$ 31,20</span>
@@ -698,9 +628,7 @@ function Landing() {
       {/* VALOR */}
       <section className="px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-3xl rounded-[2rem] bg-white p-7 shadow-card sm:p-10">
-          <h2 className="text-center text-2xl leading-tight font-extrabold sm:text-3xl">
-            Todo esto por solo US$ 9,90
-          </h2>
+          <h2 className="text-center text-2xl leading-tight font-extrabold sm:text-3xl">Todo esto por solo US$ 9,90</h2>
           <ul className="mt-7 space-y-3">
             {[
               "Sistema ActivaMente Kids completo, con más de 100 actividades",
@@ -721,9 +649,7 @@ function Landing() {
 
           <div className="mt-8 flex flex-col items-center">
             <p className="font-display text-5xl font-extrabold text-brand">US$ 9,90</p>
-            <p className="mt-1 text-sm font-semibold text-muted-foreground">
-              Pago único · producto digital
-            </p>
+            <p className="mt-1 text-sm font-semibold text-muted-foreground">Pago único · producto digital</p>
             <div className="mt-6 w-full">
               <CtaPrincipal />
             </div>
@@ -770,8 +696,8 @@ function Landing() {
           <div className="min-w-0">
             <h2 className="text-xl font-extrabold sm:text-2xl">Garantía de 7 días</h2>
             <p className="mt-2 text-sm leading-relaxed text-foreground/80 sm:text-base">
-              Prueba el material con tranquilidad. Si en 7 días consideras que no es lo que
-              buscabas, solicitas el reembolso y se te devuelve el valor pagado.
+              Prueba el material con tranquilidad. Si en 7 días consideras que no es lo que buscabas, solicitas el
+              reembolso y se te devuelve el valor pagado.
             </p>
           </div>
         </div>
@@ -800,9 +726,7 @@ function Landing() {
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             Unos minutos al día, una hoja a la vez, y muchos momentos juntos que valen la pena.
           </p>
-          <p className="mt-8 font-display text-5xl font-extrabold text-brand sm:text-6xl">
-            US$ 9,90
-          </p>
+          <p className="mt-8 font-display text-5xl font-extrabold text-brand sm:text-6xl">US$ 9,90</p>
           <div className="mt-6 w-full max-w-xl">
             <CtaPrincipal />
           </div>
@@ -812,8 +736,8 @@ function Landing() {
         <footer className="mx-auto mt-14 max-w-3xl border-t border-border pt-6 text-center text-xs leading-relaxed text-muted-foreground">
           <p className="font-bold text-foreground">ActivaMente Kids — Sistema de Enfoque</p>
           <p className="mt-2">
-            Producto digital imprimible de carácter educativo y recreativo. No sustituye
-            orientación, evaluación ni acompañamiento profesional de ningún tipo.
+            Producto digital imprimible de carácter educativo y recreativo. No sustituye orientación, evaluación ni
+            acompañamiento profesional de ningún tipo.
           </p>
         </footer>
       </section>
