@@ -16,6 +16,9 @@ import {
   Target,
   Frown,
   Smartphone,
+  ListChecks,
+  Printer,
+  Smile,
 } from "lucide-react";
 
 import megaMockupAsset from "@/assets/mega-mockup.jpg.asset.json";
