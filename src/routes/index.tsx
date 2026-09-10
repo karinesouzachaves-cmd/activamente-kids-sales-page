@@ -31,6 +31,9 @@ import bono5 from "@/assets/bono-5.png.asset.json";
 import bono6 from "@/assets/bono-6.png.asset.json";
 import bono7 from "@/assets/bono-7.png.asset.json";
 import bono8 from "@/assets/bono-8.png.asset.json";
+import prueba1 from "@/assets/prueba-1.jpg.asset.json";
+import prueba2 from "@/assets/prueba-2.jpg.asset.json";
+import prueba3 from "@/assets/prueba-3.jpg.asset.json";
 
 const megaMockup = megaMockupAsset.url;
 
