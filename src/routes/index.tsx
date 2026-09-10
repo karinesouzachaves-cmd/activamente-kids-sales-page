@@ -16,6 +16,9 @@ import {
   Target,
   Frown,
   Smartphone,
+  ListChecks,
+  Printer,
+  Smile,
 } from "lucide-react";
 
 import megaMockupAsset from "@/assets/mega-mockup.jpg.asset.json";
@@ -27,7 +30,9 @@ import bono4 from "@/assets/bono-4.png.asset.json";
 import bono5 from "@/assets/bono-5.png.asset.json";
 import bono6 from "@/assets/bono-6.png.asset.json";
 import bono7 from "@/assets/bono-7.png.asset.json";
-import bono8 from "@/assets/bono-8.png.asset.json";
+import prueba1 from "@/assets/prueba-1.jpg.asset.json";
+import prueba2 from "@/assets/prueba-2.jpg.asset.json";
+import prueba3 from "@/assets/prueba-3.jpg.asset.json";
 
 const megaMockup = megaMockupAsset.url;
 
@@ -96,63 +101,6 @@ const habilidades = [
   },
 ];
 
-const bonos = [
-  {
-    img: bono1.url,
-    title: "MI MOMENTO CONSCIENTE",
-    text: "Actividades para ayudar al niño a descubrir sus emociones, conectar con su cuerpo y observar con más atención el mundo que lo rodea.",
-    benefit:
-      "Favorece el autoconocimiento, la observación y la conciencia de sus emociones y sensaciones.",
-  },
-  {
-    img: bono2.url,
-    title: "CALMA EN ACCIÓN",
-    text: "Actividades para reconocer el enojo, hacer una pausa y practicar estrategias sencillas de autorregulación.",
-    benefit:
-      "Ayuda al niño a reconocer lo que siente y descubrir formas más conscientes de responder a sus emociones.",
-  },
-  {
-    img: bono3.url,
-    title: "MI PEQUEÑO PLANIFICADOR",
-    text: "Actividades de organización, planificación y rutinas pensadas especialmente para niños.",
-    benefit:
-      "Estimula la organización, la autonomía y la creación de pequeñas rutinas para el día a día.",
-  },
-  {
-    img: bono4.url,
-    title: "MI DIARIO DE FE Y GRATITUD",
-    text: "Un diario infantil con propuestas de fe, reflexión y gratitud para acompañar pequeños momentos de la rutina.",
-    benefit:
-      "Crea un espacio para expresar pensamientos, reconocer cosas buenas del día y cultivar la gratitud.",
-  },
-  {
-    img: bono5.url,
-    title: "NAVIDAD CREATIVA",
-    text: "Actividades lúdicas y creativas para disfrutar, aprender y crear durante la Navidad.",
-    benefit:
-      "Combina creatividad, aprendizaje y diversión a través de actividades inspiradas en la época navideña.",
-  },
-  {
-    img: bono6.url,
-    title: "MI LIBRO DE HOY",
-    text: "Actividades para comprender, imaginar y disfrutar cada lectura de una forma más participativa.",
-    benefit:
-      "Estimula la comprensión, la imaginación y la conexión del niño con lo que está leyendo.",
-  },
-  {
-    img: bono7.url,
-    title: "¡ENCUENTRA AL INTRUSO!",
-    text: "Juegos y desafíos visuales para observar, comparar y descubrir qué elemento no pertenece al grupo.",
-    benefit: "Ejercita la atención, la lógica, la observación y la memoria de una forma divertida.",
-  },
-  {
-    img: bono8.url,
-    title: "LECTORES BRILLANTES",
-    text: "Actividades para fortalecer la lectura, la comprensión y la confianza mientras el niño practica de forma progresiva y entretenida.",
-    benefit:
-      "Ayuda a practicar habilidades lectoras y de comprensión mediante diferentes tipos de actividades.",
-  },
-];
 
 const faqs = [
   {
@@ -519,8 +467,123 @@ function Landing() {
               </article>
             ))}
           </div>
+
+          {/* CTA 1 */}
+          <div className="mx-auto mt-12 flex max-w-xl flex-col items-center px-1 text-center">
+            <a
+              href={CHECKOUT_PRINCIPAL}
+              className="inline-flex w-full items-center justify-center rounded-full bg-coral px-6 py-4 text-center font-display text-base leading-tight font-extrabold tracking-wide text-white shadow-card transition-transform duration-200 hover:-translate-y-0.5 hover:brightness-105 sm:text-lg"
+            >
+              QUIERO ACTÍVAMENTE KIDS
+            </a>
+            <p className="mt-3 text-xs font-semibold text-muted-foreground sm:text-sm">
+              Acceso inmediato al material digital.
+            </p>
+          </div>
         </div>
       </section>
+
+      {/* CÓMO FUNCIONA */}
+      <section className="px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-2xl leading-tight font-extrabold text-balance sm:text-3xl lg:text-4xl">
+            Todo listo para imprimir, usar y disfrutar 💛
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            Recibes todo el material en formato digital, con acceso inmediato después de la compra y
+            la libertad de imprimir las actividades todas las veces que quieras.
+          </p>
+        </div>
+
+        <div className="mx-auto mt-10 grid max-w-5xl gap-5 md:grid-cols-3">
+          {[
+            {
+              icon: ListChecks,
+              t: "1. ELIGE LAS ACTIVIDADES",
+              d: "Selecciona las actividades según la edad, el momento y las habilidades que quieras estimular.",
+              tone: "sky",
+            },
+            {
+              icon: Printer,
+              t: "2. IMPRIME LAS VECES QUE QUIERAS",
+              d: "El material es digital, así que puedes volver a imprimir tus actividades favoritas siempre que las necesites.",
+              tone: "sun",
+            },
+            {
+              icon: Smile,
+              t: "3. APRENDE JUGANDO",
+              d: "Transforma unos minutos del día en momentos de atención, descubrimiento y aprendizaje.",
+              tone: "leaf",
+            },
+          ].map(({ icon: Icon, t, d, tone }) => (
+            <article key={t} className="rounded-3xl bg-white p-6 text-center shadow-card">
+              <span
+                className={`mx-auto grid h-12 w-12 place-items-center rounded-2xl ${toneMap[tone] ?? toneMap["sky"]}`}
+              >
+                <Icon className="h-6 w-6" />
+              </span>
+              <h3 className="mt-4 font-display text-base font-extrabold sm:text-lg">{t}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d}</p>
+            </article>
+          ))}
+        </div>
+
+        {/* FAJA DE BENEFICIOS */}
+        <div className="mx-auto mt-10 max-w-5xl rounded-[2rem] border border-border bg-cream px-6 py-6 shadow-soft">
+          <ul className="grid gap-4 text-sm font-semibold sm:grid-cols-2 lg:grid-cols-4 sm:text-base">
+            {[
+              { label: "Formato digital", strong: false },
+              { label: "Acceso inmediato", strong: false },
+              { label: "Impresión ilimitada", strong: true },
+              { label: "Para niños de 3 a 14 años", strong: false },
+            ].map((b) => (
+              <li key={b.label} className="flex items-center justify-center gap-2 text-center">
+                <Check className="h-5 w-5 shrink-0 text-leaf" />
+                <span className={b.strong ? "font-extrabold text-brand" : ""}>{b.label}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* PRUEBA SOCIAL */}
+      <section className="bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-2xl leading-tight font-extrabold text-balance sm:text-3xl lg:text-4xl">
+            Mira lo que dicen quienes ya están usando ActivaMente Kids 💛
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            Familias que ya recibieron el material y comenzaron a disfrutar las actividades en casa.
+          </p>
+        </div>
+
+        <div className="mx-auto mt-10 grid max-w-6xl gap-6 lg:grid-cols-3">
+          {[prueba1.url, prueba2.url, prueba3.url].map((src, i) => (
+            <figure key={src} className="rounded-3xl bg-cream p-3 shadow-soft">
+              <img
+                src={src}
+                alt={`Conversación real de una familia usando ActivaMente Kids (${i + 1})`}
+                loading="lazy"
+                className="mx-auto h-[520px] w-full object-contain sm:h-[640px]"
+              />
+            </figure>
+          ))}
+        </div>
+
+        {/* CTA 2 */}
+        <div className="mx-auto mt-12 flex max-w-xl flex-col items-center px-1 text-center">
+          <a
+            href={CHECKOUT_PRINCIPAL}
+            className="inline-flex w-full items-center justify-center rounded-full bg-coral px-6 py-4 text-center font-display text-base leading-tight font-extrabold tracking-wide text-white shadow-card transition-transform duration-200 hover:-translate-y-0.5 hover:brightness-105 sm:text-lg"
+          >
+            QUIERO ACTÍVAMENTE KIDS
+          </a>
+          <p className="mt-3 text-xs font-semibold text-muted-foreground sm:text-sm">
+            Acceso inmediato al material digital.
+          </p>
+        </div>
+      </section>
+
 
       {/* HABILIDADES */}
       <section className="bg-white px-4 py-14 sm:px-6 sm:py-20">
@@ -551,47 +614,6 @@ function Landing() {
         </div>
       </section>
 
-      {/* PASOS */}
-      <section className="px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl leading-tight font-extrabold sm:text-3xl lg:text-4xl">
-            Empezar es muy fácil
-          </h2>
-        </div>
-
-        <div className="mx-auto mt-10 grid max-w-4xl gap-5 md:grid-cols-3">
-          {[
-            {
-              n: "1",
-              t: "Accede",
-              d: "Compras y recibes el acceso digital al instante en tu correo.",
-            },
-            {
-              n: "2",
-              t: "Elige",
-              d: "Seleccionas la actividad según la edad y la habilidad que quieras trabajar.",
-            },
-            {
-              n: "3",
-              t: "Activa su mente",
-              d: "Imprimes, se sientan juntos y en pocos minutos ya está jugando y aprendiendo.",
-            },
-          ].map((s) => (
-            <div key={s.n} className="rounded-3xl bg-white p-6 text-center shadow-card">
-              <span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-brand font-display text-lg font-extrabold text-brand-foreground">
-                {s.n}
-              </span>
-              <h3 className="mt-4 text-lg font-bold">{s.t}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.d}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mx-auto mt-10 flex max-w-xl flex-col items-center px-1">
-          <CtaPrincipal />
-          <MicroTextos />
-        </div>
-      </section>
 
       {/* TIEMPO */}
       <section className="px-4 pb-14 sm:px-6 sm:pb-20">
@@ -602,72 +624,6 @@ function Landing() {
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-foreground/80 sm:text-lg">
             Todo está listo y ordenado: abres, eliges e imprimes. El tiempo que antes se iba
             buscando ideas ahora se queda con quien más importa.
-          </p>
-        </div>
-      </section>
-
-      {/* BONOS INCLUIDOS */}
-      <section className="bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl leading-tight font-extrabold text-balance sm:text-3xl lg:text-4xl">
-            Y ESO NO ES TODO…
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            También recibirás materiales complementarios para transformar cada momento en una nueva
-            oportunidad de aprender, descubrir y desarrollar habilidades.
-          </p>
-        </div>
-
-        <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-2">
-          {bonos.map((b) => (
-            <article
-              key={b.title}
-              className="flex flex-col items-center rounded-3xl border border-border bg-cream p-6 text-center shadow-soft"
-            >
-              <div className="flex h-56 w-full items-center justify-center sm:h-64">
-                <img
-                  src={b.img}
-                  alt={`Portada del material ${b.title}`}
-                  loading="lazy"
-                  className="h-full w-auto max-w-full object-contain"
-                />
-              </div>
-              <h3 className="mt-5 font-display text-lg leading-snug font-extrabold text-brand">
-                {b.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{b.text}</p>
-              <p className="mt-4 rounded-2xl bg-sky-soft px-4 py-3 text-sm leading-relaxed font-bold text-brand">
-                {b.benefit}
-              </p>
-              <div className="mt-4 w-full rounded-2xl border border-border bg-white px-4 py-3">
-                <p className="text-sm font-semibold text-muted-foreground">
-                  Valor: <span className="line-through">US$ 3,90</span>
-                </p>
-                <p className="mt-1 text-sm font-semibold text-muted-foreground">
-                  🎁 <strong className="font-bold text-emerald-600">GRATIS</strong> CON ACTIVAMENTE
-                  KIDS
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        {/* TRANSICIÓN / CÁLCULO DE BONOS */}
-        <div className="mx-auto mt-12 max-w-3xl rounded-[2rem] border border-border bg-cream p-7 text-center shadow-card sm:p-10">
-          <span className="inline-flex items-center justify-center rounded-full bg-brand px-5 py-2 font-display text-sm font-extrabold tracking-wide text-white sm:text-base">
-            8 BONOS INCLUIDOS
-          </span>
-          <p className="mt-5 text-sm font-semibold text-muted-foreground sm:text-base">
-            Valor individual de cada bono: US$ 3,90
-          </p>
-          <p className="mt-2 text-base font-bold sm:text-lg">
-            Valor total de los 8 bonos: <span className="line-through">US$ 31,20</span>
-          </p>
-          <p className="mt-4 font-display text-2xl font-extrabold text-emerald-600 sm:text-3xl">
-            🎁 HOY LOS RECIBES GRATIS
-          </p>
-          <p className="mt-3 text-sm font-semibold text-muted-foreground">
-            8 × US$ 3,90 = US$ 31,20
           </p>
         </div>
       </section>
