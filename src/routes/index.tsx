@@ -10,8 +10,6 @@ import {
   Check,
   ShieldCheck,
   Download,
-  Printer,
-  Baby,
   Lock,
   ChevronDown,
   Clock,
@@ -21,7 +19,7 @@ import {
 } from "lucide-react";
 
 import megaMockupAsset from "@/assets/mega-mockup.jpg.asset.json";
-import productoPrincipal from "@/assets/producto-principal.jpg";
+import capaActiva from "@/assets/capa-activa.jpg.asset.json";
 import bono1 from "@/assets/bono-1.png.asset.json";
 import bono2 from "@/assets/bono-2.png.asset.json";
 import bono3 from "@/assets/bono-3.png.asset.json";
@@ -434,47 +432,86 @@ function Landing() {
 
       {/* SOLUCIÓN */}
       <section className="px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2">
-          <div className="rounded-[2rem] bg-white p-4 shadow-card">
-            <img
-              src={productoPrincipal}
-              alt="Hojas de actividades imprimibles de ActivaMente Kids"
-              width={1200}
-              height={1008}
-              loading="lazy"
-              className="h-auto w-full rounded-[1.4rem] object-contain"
-            />
+        <div className="mx-auto max-w-5xl">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
+            <div className="rounded-[2rem] bg-white p-4 shadow-card sm:p-6">
+              <img
+                src={capaActiva.url}
+                alt="Portada del libro de actividades ActivaMente Kids"
+                loading="lazy"
+                className="mx-auto h-auto w-full max-w-[520px] object-contain"
+              />
+            </div>
+
+            <div>
+              <h2 className="text-2xl leading-tight font-extrabold sm:text-3xl lg:text-4xl">
+                <span aria-hidden="true">⭐</span> ActivaMente Kids — +100 actividades
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+                Actividades para estimular la atención, la concentración, la memoria, el
+                razonamiento lógico, las secuencias, los patrones, la asociación, la coordinación
+                motora fina y otras habilidades importantes para el aprendizaje.
+              </p>
+            </div>
           </div>
 
-          <div>
-            <h2 className="text-2xl leading-tight font-extrabold sm:text-3xl lg:text-4xl">
-              Conoce ActivaMente Kids
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Un sistema de enfoque pensado para casa: actividades listas para imprimir, organizadas
-              por habilidad y por edad, para que cada día tengas algo bueno que proponer en pocos
-              minutos.
-            </p>
+          {/* Transición a los bonos */}
+          <p className="mx-auto mt-12 max-w-2xl rounded-2xl bg-cream px-5 py-4 text-center text-base font-bold text-foreground shadow-card sm:text-lg">
+            <span aria-hidden="true">🎁</span> Y además, recibirás 7 bonos especiales para
+            complementar su aprendizaje.
+          </p>
 
-            <ul className="mt-6 space-y-3">
-              {[
-                { icon: Puzzle, t: "Más de 100 actividades organizadas por habilidad" },
-                { icon: Baby, t: "Pensadas para edades de 3 a 14 años" },
-                { icon: Printer, t: "Imprimibles en casa, cuantas veces quieras" },
-                { icon: Download, t: "Digital: acceso inmediato tras la compra" },
-                { icon: Clock, t: "Práctico: eliges e imprimes en menos de 2 minutos" },
-                { icon: Sparkles, t: "Divertido: aprende sin darse cuenta de que aprende" },
-              ].map(({ icon: Icon, t }) => (
-                <li key={t} className="flex items-start gap-3">
-                  <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-leaf-soft text-leaf">
-                    <Icon className="h-4 w-4" />
-                  </span>
-                  <span className="min-w-0 text-sm leading-relaxed text-foreground sm:text-base">
-                    {t}
-                  </span>
-                </li>
-              ))}
-            </ul>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                img: bono1.url,
+                nombre: "Bono 1 — Mi Momento Consciente",
+                desc: "Actividades para ayudar al niño a reconocer sus emociones, conectar con su cuerpo y observar el mundo que lo rodea, desarrollando atención y conciencia de una manera sencilla y natural.",
+              },
+              {
+                img: bono2.url,
+                nombre: "Bono 2 — Calma en Acción",
+                desc: "Actividades para ayudar al niño a reconocer el enojo, hacer una pausa y practicar estrategias de autorregulación para afrontar mejor esos momentos de emociones intensas.",
+              },
+              {
+                img: bono3.url,
+                nombre: "Bono 3 — Mi Pequeño Planificador",
+                desc: "Un recurso visual para ayudar al niño a organizar su semana, crear rutinas y acompañar pequeñas responsabilidades, favoreciendo la organización y la autonomía.",
+              },
+              {
+                img: bono4.url,
+                nombre: "Bono 4 — Mi Diario de Fe y Gratitud",
+                desc: "Un diario infantil para crear momentos de fe, reflexión y gratitud, ayudando al niño a expresar lo que siente, reconocer lo bueno de cada día y cultivar valores positivos.",
+              },
+              {
+                img: bono5.url,
+                nombre: "Bono 5 — Navidad Creativa",
+                desc: "Actividades lúdicas y creativas para que los niños puedan aprender, crear y divertirse durante la Navidad, transformando esta época especial en nuevos momentos de aprendizaje.",
+              },
+              {
+                img: bono6.url,
+                nombre: "Bono 6 — Mi Libro de Hoy",
+                desc: "Actividades para acompañar cada lectura y ayudar al niño a comprender, imaginar, interpretar y expresar lo que entendió, haciendo de la lectura una experiencia más participativa.",
+              },
+              {
+                img: bono7.url,
+                nombre: "Bono 7 — ¡Encuentra al Intruso!",
+                desc: "Juegos visuales de observación para entrenar la atención, la memoria y el razonamiento lógico, desafiando al niño a observar, pensar y descubrir cuál elemento es diferente.",
+              },
+            ].map((b) => (
+              <article key={b.nombre} className="rounded-[1.6rem] bg-white p-4 shadow-card">
+                <img
+                  src={b.img}
+                  alt={b.nombre}
+                  loading="lazy"
+                  className="mx-auto h-44 w-full object-contain sm:h-52"
+                />
+                <h3 className="mt-4 text-base font-extrabold sm:text-lg">
+                  <span aria-hidden="true">🎁</span> {b.nombre}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{b.desc}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
