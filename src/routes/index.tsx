@@ -551,47 +551,6 @@ function Landing() {
         </div>
       </section>
 
-      {/* PASOS */}
-      <section className="px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl leading-tight font-extrabold sm:text-3xl lg:text-4xl">
-            Empezar es muy fácil
-          </h2>
-        </div>
-
-        <div className="mx-auto mt-10 grid max-w-4xl gap-5 md:grid-cols-3">
-          {[
-            {
-              n: "1",
-              t: "Accede",
-              d: "Compras y recibes el acceso digital al instante en tu correo.",
-            },
-            {
-              n: "2",
-              t: "Elige",
-              d: "Seleccionas la actividad según la edad y la habilidad que quieras trabajar.",
-            },
-            {
-              n: "3",
-              t: "Activa su mente",
-              d: "Imprimes, se sientan juntos y en pocos minutos ya está jugando y aprendiendo.",
-            },
-          ].map((s) => (
-            <div key={s.n} className="rounded-3xl bg-white p-6 text-center shadow-card">
-              <span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-brand font-display text-lg font-extrabold text-brand-foreground">
-                {s.n}
-              </span>
-              <h3 className="mt-4 text-lg font-bold">{s.t}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.d}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mx-auto mt-10 flex max-w-xl flex-col items-center px-1">
-          <CtaPrincipal />
-          <MicroTextos />
-        </div>
-      </section>
 
       {/* TIEMPO */}
       <section className="px-4 pb-14 sm:px-6 sm:pb-20">
