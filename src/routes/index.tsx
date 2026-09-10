@@ -30,7 +30,6 @@ import bono4 from "@/assets/bono-4.png.asset.json";
 import bono5 from "@/assets/bono-5.png.asset.json";
 import bono6 from "@/assets/bono-6.png.asset.json";
 import bono7 from "@/assets/bono-7.png.asset.json";
-import bono8 from "@/assets/bono-8.png.asset.json";
 import prueba1 from "@/assets/prueba-1.jpg.asset.json";
 import prueba2 from "@/assets/prueba-2.jpg.asset.json";
 import prueba3 from "@/assets/prueba-3.jpg.asset.json";
@@ -102,63 +101,6 @@ const habilidades = [
   },
 ];
 
-const bonos = [
-  {
-    img: bono1.url,
-    title: "MI MOMENTO CONSCIENTE",
-    text: "Actividades para ayudar al niño a descubrir sus emociones, conectar con su cuerpo y observar con más atención el mundo que lo rodea.",
-    benefit:
-      "Favorece el autoconocimiento, la observación y la conciencia de sus emociones y sensaciones.",
-  },
-  {
-    img: bono2.url,
-    title: "CALMA EN ACCIÓN",
-    text: "Actividades para reconocer el enojo, hacer una pausa y practicar estrategias sencillas de autorregulación.",
-    benefit:
-      "Ayuda al niño a reconocer lo que siente y descubrir formas más conscientes de responder a sus emociones.",
-  },
-  {
-    img: bono3.url,
-    title: "MI PEQUEÑO PLANIFICADOR",
-    text: "Actividades de organización, planificación y rutinas pensadas especialmente para niños.",
-    benefit:
-      "Estimula la organización, la autonomía y la creación de pequeñas rutinas para el día a día.",
-  },
-  {
-    img: bono4.url,
-    title: "MI DIARIO DE FE Y GRATITUD",
-    text: "Un diario infantil con propuestas de fe, reflexión y gratitud para acompañar pequeños momentos de la rutina.",
-    benefit:
-      "Crea un espacio para expresar pensamientos, reconocer cosas buenas del día y cultivar la gratitud.",
-  },
-  {
-    img: bono5.url,
-    title: "NAVIDAD CREATIVA",
-    text: "Actividades lúdicas y creativas para disfrutar, aprender y crear durante la Navidad.",
-    benefit:
-      "Combina creatividad, aprendizaje y diversión a través de actividades inspiradas en la época navideña.",
-  },
-  {
-    img: bono6.url,
-    title: "MI LIBRO DE HOY",
-    text: "Actividades para comprender, imaginar y disfrutar cada lectura de una forma más participativa.",
-    benefit:
-      "Estimula la comprensión, la imaginación y la conexión del niño con lo que está leyendo.",
-  },
-  {
-    img: bono7.url,
-    title: "¡ENCUENTRA AL INTRUSO!",
-    text: "Juegos y desafíos visuales para observar, comparar y descubrir qué elemento no pertenece al grupo.",
-    benefit: "Ejercita la atención, la lógica, la observación y la memoria de una forma divertida.",
-  },
-  {
-    img: bono8.url,
-    title: "LECTORES BRILLANTES",
-    text: "Actividades para fortalecer la lectura, la comprensión y la confianza mientras el niño practica de forma progresiva y entretenida.",
-    benefit:
-      "Ayuda a practicar habilidades lectoras y de comprensión mediante diferentes tipos de actividades.",
-  },
-];
 
 const faqs = [
   {
