@@ -10,8 +10,6 @@ import {
   Check,
   ShieldCheck,
   Download,
-  Printer,
-  Baby,
   Lock,
   ChevronDown,
   Clock,
