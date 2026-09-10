@@ -328,7 +328,7 @@ function Landing() {
         <div className="mx-auto mt-8 flex max-w-xl flex-col items-center px-1">
           <div className="mb-5 flex flex-wrap items-center justify-center gap-2 text-xs font-extrabold tracking-wide sm:text-sm">
             <span className="rounded-full bg-white px-3 py-1.5 text-brand shadow-soft">
-              ACTIVAMENTE KIDS
+              ActivaMente Kids
             </span>
             <span className="rounded-full bg-sky-soft px-3 py-1.5 text-brand">
               +100 ACTIVIDADES
@@ -337,7 +337,7 @@ function Landing() {
               PARA NIÑOS DE 3 A 14 AÑOS
             </span>
             <span className="rounded-full bg-coral-soft px-3 py-1.5 text-coral">
-              PRODUCTO DIGITAL E IMPRIMIBLE
+              MATERIAL DIGITAL LISTO PARA IMPRIMIR
             </span>
           </div>
 
@@ -350,7 +350,7 @@ function Landing() {
             <CtaPrincipal />
           </div>
           <p className="mt-4 text-center text-xs font-semibold text-muted-foreground sm:text-sm">
-            Acceso digital • Material imprimible • Para niños de 3 a 14 años
+            Descarga digital • Imprime y utiliza las actividades
           </p>
         </div>
       </section>
