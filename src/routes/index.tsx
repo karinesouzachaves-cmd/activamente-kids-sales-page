@@ -359,39 +359,37 @@ function Landing() {
       <section className="bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl leading-tight font-extrabold text-balance sm:text-3xl lg:text-4xl">
-            ¿Cada vez es más difícil mantener su atención en una actividad?
+            ¿Te resulta familiar?
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            No estás sola ni solo. Muchas familias viven las mismas escenas cada tarde, y no se
-            trata de falta de cariño ni de paciencia: simplemente hay mucho ruido alrededor.
-          </p>
         </div>
 
-        <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2">
+        <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
           {[
-            "Empieza algo con entusiasmo y a los pocos minutos ya está en otra cosa.",
-            "Las pantallas ganan siempre, y después cuesta volver a la calma.",
-            "Repetir la misma indicación tres o cuatro veces se volvió rutina.",
-            "Te gustaría acompañarlo, pero no sabes por dónde empezar ni qué proponerle.",
-            "Buscas actividades en internet y pierdes más tiempo eligiendo que jugando.",
-            "Quieres momentos juntos que sumen, no solo llenar el rato.",
-          ].map((t) => (
+            { e: "🧩", t: "Empieza una actividad… y enseguida pierde el interés." },
+            { e: "📚", t: "Le cuesta mantenerse concentrado hasta terminar lo que empieza." },
+            { e: "😣", t: "Cuando algo parece difícil, puede frustrarse y querer abandonar." },
+            {
+              e: "📱",
+              t: "Y muchas veces la pantalla termina siendo la opción más fácil para mantenerlo entretenido.",
+            },
+          ].map((item) => (
             <div
-              key={t}
+              key={item.t}
               className="flex items-start gap-3 rounded-3xl bg-cream p-5 text-left shadow-soft"
             >
-              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-coral-soft text-coral">
-                <Heart className="h-4 w-4" />
+              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-coral-soft text-lg">
+                {item.e}
               </span>
               <p className="min-w-0 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                {t}
+                {item.t}
               </p>
             </div>
           ))}
         </div>
 
-        <p className="mx-auto mt-10 max-w-2xl text-center text-base font-bold text-brand sm:text-lg">
-          La buena noticia: la atención también se entrena, y se entrena mejor jugando.
+        <p className="mx-auto mt-10 max-w-2xl rounded-3xl bg-cream px-6 py-5 text-center text-lg font-bold text-balance text-brand shadow-soft sm:text-xl">
+          ¿Y si unos minutos al día pudieran convertirse en un momento divertido para ejercitar su
+          atención, memoria y razonamiento?
         </p>
       </section>
 
