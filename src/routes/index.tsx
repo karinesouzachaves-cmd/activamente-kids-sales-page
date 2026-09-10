@@ -15,6 +15,9 @@ import {
   Lock,
   ChevronDown,
   Clock,
+  Target,
+  Frown,
+  Smartphone,
 } from "lucide-react";
 
 import megaMockupAsset from "@/assets/mega-mockup.jpg.asset.json";
