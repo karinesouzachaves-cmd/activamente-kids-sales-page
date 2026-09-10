@@ -526,42 +526,70 @@ function Landing() {
         </div>
       </section>
 
-      {/* COMPLEMENTOS */}
+      {/* BONOS INCLUIDOS */}
       <section className="bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl leading-tight font-extrabold text-balance sm:text-3xl lg:text-4xl">
-            ¿Quieres llevar la experiencia aún más lejos?
+            Y ESO NO ES TODO…
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Estos son materiales complementarios, opcionales e independientes.
-          </p>
-          <p className="mx-auto mt-5 max-w-2xl rounded-3xl bg-sun-soft px-5 py-4 text-sm leading-relaxed font-bold text-coral sm:text-base">
-            Importante: estos materiales <u>no están incluidos</u> en los R$ 9,90 de ActivaMente
-            Kids. Cada uno se adquiere por separado a R$ 3,90. El sistema principal funciona
-            completo por sí solo.
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            También recibirás materiales complementarios para transformar cada momento en una nueva
+            oportunidad de aprender, descubrir y desarrollar habilidades.
           </p>
         </div>
 
-        <div className="mx-auto mt-10 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {complementos.map((c, i) => (
+        <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-2">
+          {bonos.map((b) => (
             <article
-              key={c.title}
-              className="flex flex-col rounded-3xl border border-border bg-cream p-6 shadow-soft"
+              key={b.title}
+              className="flex flex-col items-center rounded-3xl border border-border bg-cream p-6 text-center shadow-soft"
             >
-              <h3 className="font-display text-base leading-snug font-extrabold text-brand">
-                {c.title}
+              <div className="flex h-56 w-full items-center justify-center sm:h-64">
+                <img
+                  src={b.img}
+                  alt={`Portada del material ${b.title}`}
+                  loading="lazy"
+                  className="h-full w-auto max-w-full object-contain"
+                />
+              </div>
+              <h3 className="mt-5 font-display text-lg leading-snug font-extrabold text-brand">
+                {b.title}
               </h3>
-              <p className="mt-3 grow text-sm leading-relaxed text-muted-foreground">{c.text}</p>
-              <p className="mt-4 font-display text-2xl font-extrabold text-coral">R$ 3,90</p>
-              <a
-                href={`[INSERTAR AQUÍ URL DEL CHECKOUT HOTMART DE ${c.title}]`}
-                className="mt-4 inline-flex items-center justify-center rounded-full border-2 border-coral px-4 py-3 text-center text-sm font-extrabold tracking-wide text-coral transition-colors duration-200 hover:bg-coral hover:text-white"
-              >
-                AÑADIR POR R$ 3,90
-              </a>
-              <span className="sr-only">Material complementario número {i + 1}</span>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{b.text}</p>
+              <p className="mt-4 rounded-2xl bg-sky-soft px-4 py-3 text-sm leading-relaxed font-bold text-brand">
+                {b.benefit}
+              </p>
             </article>
           ))}
+        </div>
+
+        <div className="mx-auto mt-12 max-w-3xl rounded-[2rem] bg-cream p-7 text-center shadow-card sm:p-10">
+          <h3 className="font-display text-xl leading-tight font-extrabold text-balance text-brand sm:text-2xl">
+            TODO ESTO FORMA PARTE DE TU EXPERIENCIA ACTIVAMENTE KIDS
+          </h3>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            {["ActivaMente Kids", "Bonos incluidos", "Acceso digital", "Material imprimible"].map(
+              (item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-left text-sm font-bold shadow-soft sm:text-base"
+                >
+                  <Check className="h-5 w-5 shrink-0 text-leaf" />
+                  {item}
+                </div>
+              ),
+            )}
+          </div>
+
+          <p className="mt-8 font-display text-4xl font-extrabold text-brand sm:text-5xl">
+            US$ 9,90
+          </p>
+          <div className="mt-6 flex justify-center">
+            <CtaPrincipal />
+          </div>
+          <p className="mt-4 text-xs font-semibold text-muted-foreground sm:text-sm">
+            Acceso digital • Material imprimible • Para niños de 3 a 14 años
+          </p>
         </div>
       </section>
 
