@@ -340,17 +340,6 @@ function Landing() {
             </span>
           </div>
 
-          <p className="font-display text-sm font-bold text-muted-foreground">
-            Precio de lanzamiento
-          </p>
-          <p className="font-display text-5xl font-extrabold text-brand sm:text-6xl">US$ 9,90</p>
-
-          <div className="mt-6 w-full">
-            <CtaPrincipal />
-          </div>
-          <p className="mt-4 text-center text-xs font-semibold text-muted-foreground sm:text-sm">
-            Descarga digital • Imprime y utiliza las actividades
-          </p>
         </div>
       </section>
 
@@ -364,32 +353,80 @@ function Landing() {
 
         <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
           {[
-            { e: "🧩", t: "Empieza una actividad… y enseguida pierde el interés." },
-            { e: "📚", t: "Le cuesta mantenerse concentrado hasta terminar lo que empieza." },
-            { e: "😣", t: "Cuando algo parece difícil, puede frustrarse y querer abandonar." },
             {
-              e: "📱",
+              Icon: Puzzle,
+              bg: "bg-sky-soft",
+              fg: "text-brand",
+              t: "Empieza una actividad… y enseguida pierde el interés.",
+            },
+            {
+              Icon: Target,
+              bg: "bg-sun-soft",
+              fg: "text-coral",
+              t: "Le cuesta mantenerse concentrado hasta terminar lo que empieza.",
+            },
+            {
+              Icon: Frown,
+              bg: "bg-coral-soft",
+              fg: "text-coral",
+              t: "Cuando algo parece difícil, puede frustrarse y querer abandonar.",
+            },
+            {
+              Icon: Smartphone,
+              bg: "bg-sky-soft",
+              fg: "text-brand",
               t: "Y muchas veces la pantalla termina siendo la opción más fácil para mantenerlo entretenido.",
             },
-          ].map((item) => (
+          ].map(({ Icon, bg, fg, t }) => (
             <div
-              key={item.t}
+              key={t}
               className="flex items-start gap-3 rounded-3xl bg-cream p-5 text-left shadow-soft"
             >
-              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-coral-soft text-lg">
-                {item.e}
+              <span
+                className={`mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-full ${bg} ${fg}`}
+              >
+                <Icon className="h-5 w-5" strokeWidth={2} />
               </span>
               <p className="min-w-0 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                {item.t}
+                {t}
               </p>
             </div>
           ))}
         </div>
 
-        <p className="mx-auto mt-10 max-w-2xl rounded-3xl bg-cream px-6 py-5 text-center text-lg font-bold text-balance text-brand shadow-soft sm:text-xl">
-          ¿Y si unos minutos al día pudieran convertirse en un momento divertido para ejercitar su
-          atención, memoria y razonamiento?
-        </p>
+        {/* MENSAJE DE VALOR */}
+        <div className="mx-auto mt-12 max-w-3xl text-center">
+          <p className="text-xl leading-snug font-extrabold text-balance sm:text-2xl lg:text-3xl">
+            Más de 100 actividades creadas para estimular la{" "}
+            <span className="font-extrabold text-brand">atención</span>, la{" "}
+            <span className="font-extrabold text-coral">concentración</span>, la{" "}
+            <span className="font-extrabold text-brand">memoria</span>, el{" "}
+            <span className="font-extrabold text-coral">razonamiento lógico</span>, la coordinación
+            motora fina, la asociación, las secuencias, las formas y los patrones.
+          </p>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            Todo ello a través de actividades pensadas para ayudar al niño a mantener la atención
+            por más tiempo, involucrarse en lo que está haciendo, seguir instrucciones y avanzar en
+            cada nuevo desafío sin perder el interés tan fácilmente.
+          </p>
+        </div>
+
+        {/* PRIMER BLOQUE DE COMPRA */}
+        <div className="mx-auto mt-10 flex max-w-xl flex-col items-center px-1">
+          <p className="font-display text-5xl font-extrabold text-brand sm:text-6xl">US$ 9,90</p>
+          <div className="mt-6 w-full">
+            <a
+              href={CHECKOUT_PRINCIPAL}
+              className="block w-full rounded-full bg-coral px-6 py-5 text-center text-base font-extrabold tracking-wide text-white shadow-card transition hover:brightness-105 sm:text-lg"
+            >
+              QUIERO ACTIVAMENTE
+            </a>
+          </div>
+          <p className="mt-4 text-center text-xs font-semibold text-muted-foreground sm:text-sm">
+            Descarga digital • Imprime y utiliza las actividades
+          </p>
+        </div>
+
       </section>
 
       {/* SOLUCIÓN */}
