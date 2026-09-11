@@ -7,10 +7,17 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-    vite: {
+  vite: {
     base: "/activamente-kids-sales-page/",
   },
   tanstackStart: {
+    // Generate static HTML so the app can be hosted on GitHub Pages.
+    prerender: {
+      enabled: true,
+      autoStaticPathsDiscovery: true,
+      crawlLinks: false,
+      failOnError: true,
+    },
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
