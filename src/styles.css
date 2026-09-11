@@ -177,3 +177,8 @@
     font-family: var(--font-display);
   }
 }
+
+
+html {
+  scroll-behavior: smooth;
+}

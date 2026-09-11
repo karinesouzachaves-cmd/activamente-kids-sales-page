@@ -30,13 +30,14 @@ import bono4 from "@/assets/bono-4.png.asset.json";
 import bono5 from "@/assets/bono-5.png.asset.json";
 import bono6 from "@/assets/bono-6.png.asset.json";
 import bono7 from "@/assets/bono-7.png.asset.json";
+import bono8 from "@/assets/bono-8.png.asset.json";
 import prueba1 from "@/assets/prueba-1.jpg.asset.json";
 import prueba2 from "@/assets/prueba-2.jpg.asset.json";
 import prueba3 from "@/assets/prueba-3.jpg.asset.json";
 
 const megaMockup = megaMockupAsset.url;
 
-const CHECKOUT_PRINCIPAL = "[URL_CHECKOUT_HOTMART]";
+const CHECKOUT_PRINCIPAL = "https://pay.hotmart.com/U107544927E?checkoutMode=10";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -104,31 +105,31 @@ const habilidades = [
 const faqs = [
   {
     q: "¿Es un producto físico o digital?",
-    a: "Es 100% digital. Después de la compra recibes el acceso para descargar los archivos en formato PDF. No se envía nada por correo postal.",
+    a: "Es 100% digital. Después de la compra recibes el acceso para descargar los archivos en formato PDF. No se envía ningún producto físico.",
   },
   {
     q: "¿Necesito imprimir las actividades?",
-    a: "Puedes imprimirlas en casa o en cualquier copistería, en hojas comunes tamaño carta o A4. También puedes usarlas en una tablet con una app de escritura, si prefieres no imprimir.",
+    a: "Sí. El material fue creado para imprimir y utilizar con el niño. Puedes imprimirlo en casa o en una copistería, en hojas tamaño carta o A4, y volver a imprimirlo todas las veces que quieras.",
   },
   {
     q: "¿Qué incluye exactamente por US$ 9,90?",
-    a: "Incluye el sistema ActivaMente Kids completo: más de 100 actividades imprimibles para edades de 3 a 14 años, organizadas por habilidad, con acceso inmediato tras la compra.",
+    a: "Incluye ActivaMente Kids con más de 100 actividades y 8 bonos especiales para complementar el aprendizaje, todo en formato digital y listo para imprimir.",
   },
   {
     q: "¿Los materiales complementarios están incluidos?",
-    a: "Sí. Los 8 materiales complementarios están incluidos como bonos, sin costo adicional, junto con el sistema principal ActivaMente Kids.",
+    a: "Sí. Los 8 bonos presentados en esta página están incluidos junto con ActivaMente Kids por US$ 9,90.",
   },
   {
     q: "¿Sirve para varios niños?",
-    a: "Sí. Al ser imprimible, puedes reimprimir las actividades tantas veces como quieras para tus hijos o tu grupo en casa.",
+    a: "Sí. Como el material permite impresión ilimitada, puedes imprimir las actividades nuevamente para utilizarlas con más de un niño dentro de tu familia o rutina educativa.",
   },
   {
     q: "¿Cuándo recibo el acceso?",
-    a: "El acceso llega al correo electrónico usado en la compra, justo después de confirmarse el pago.",
+    a: "El acceso llega al correo electrónico utilizado en la compra después de la confirmación del pago.",
   },
   {
     q: "¿Y si no me gusta?",
-    a: "Cuentas con 7 días de garantía. Si consideras que no es para ti, solicitas el reembolso dentro de ese plazo y se te devuelve el valor pagado.",
+    a: "Cuentas con 7 días de garantía. Si dentro de ese plazo consideras que el material no es lo que buscabas, puedes solicitar el reembolso.",
   },
 ];
 
@@ -147,7 +148,7 @@ function CtaPrincipal({ className = "" }: { className?: string }) {
       href={CHECKOUT_PRINCIPAL}
       className={`inline-flex w-full max-w-xl items-center justify-center rounded-full bg-coral px-6 py-4 text-center font-display text-base leading-tight font-extrabold tracking-wide text-white shadow-card transition-transform duration-200 hover:-translate-y-0.5 hover:brightness-105 sm:text-lg ${className}`}
     >
-      QUIERO ACTIVAMENTE KIDS POR US$ 9,90
+      QUIERO ACTIVAMENTE KIDS
     </a>
   );
 }
@@ -207,7 +208,7 @@ function FloatingCta() {
         href={CHECKOUT_PRINCIPAL}
         className="flex w-full items-center justify-center rounded-full bg-coral px-4 py-3.5 text-center font-display text-sm leading-tight font-extrabold tracking-wide text-white shadow-card"
       >
-        QUIERO ACTIVAMENTE KIDS POR US$ 9,90
+        QUIERO ACTIVAMENTE KIDS
       </a>
     </div>
   );
@@ -243,8 +244,7 @@ function Landing() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Más de 100 actividades para estimular la atención, la memoria, el razonamiento y otras habilidades
-            cognitivas mientras aprende y se divierte.
+            Más de 100 actividades creadas para estimular la atención, la memoria, la concentración, el razonamiento y otras habilidades importantes para su aprendizaje.
           </p>
         </div>
 
@@ -336,14 +336,14 @@ function Landing() {
           <p className="font-display text-5xl font-extrabold text-brand sm:text-6xl">US$ 9,90</p>
           <div className="mt-6 w-full">
             <a
-              href={CHECKOUT_PRINCIPAL}
+              href="#oferta-bonos"
               className="block w-full rounded-full bg-coral px-6 py-5 text-center text-base font-extrabold tracking-wide text-white shadow-card transition hover:brightness-105 sm:text-lg"
             >
-              QUIERO ACTIVAMENTE
+              QUIERO ACTIVAMENTE KIDS
             </a>
           </div>
           <p className="mt-4 text-center text-xs font-semibold text-muted-foreground sm:text-sm">
-            Descarga digital • Imprime y utiliza las actividades
+            Acceso inmediato • Material digital listo para imprimir
           </p>
         </div>
       </section>
@@ -376,11 +376,11 @@ function Landing() {
           {/* Transición a los bonos */}
           <p className="mx-auto mt-12 max-w-2xl rounded-2xl bg-cream px-5 py-4 text-center text-base font-bold text-foreground shadow-card sm:text-lg">
             <span aria-hidden="true">🎁</span> Y además, recibirás{" "}
-            <span className="rounded-lg bg-brand/10 px-1.5 py-0.5 font-extrabold text-brand">7 bonos especiales</span>{" "}
+            <span className="rounded-lg bg-brand/10 px-1.5 py-0.5 font-extrabold text-brand">8 bonos especiales</span>{" "}
             para complementar su aprendizaje
           </p>
 
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 img: bono1.url,
@@ -417,10 +417,15 @@ function Landing() {
                 nombre: "Bono 7 — ¡Encuentra al Intruso!",
                 desc: "Juegos visuales de observación para entrenar la atención, la memoria y el razonamiento lógico, desafiando al niño a observar, pensar y descubrir cuál elemento es diferente.",
               },
-            ].map((b, index) => (
+              {
+                img: bono8.url,
+                nombre: "Bono 8 — Lectores Brillantes",
+                desc: "Actividades para fortalecer la lectura, la comprensión y la confianza, ayudando al niño a practicar y avanzar en sus habilidades lectoras de una manera entretenida.",
+              },
+            ].map((b) => (
               <article
                 key={b.nombre}
-                className={`rounded-[1.6rem] bg-white p-3 shadow-card ${index === 6 ? "lg:col-start-2" : ""}`}
+                className="rounded-[1.6rem] bg-white p-3 shadow-card"
               >
                 <img src={b.img} alt={b.nombre} loading="lazy" className="mx-auto h-60 w-full object-contain sm:h-72" />
                 <h3 className="mt-3 text-base font-extrabold sm:text-lg">
@@ -431,13 +436,13 @@ function Landing() {
             ))}
           </div>
 
-          {/* CTA 1 */}
-          <div className="mx-auto mt-12 flex max-w-xl flex-col items-center px-1 text-center">
+          {/* CTA después de los bonos */}
+          <div id="oferta-bonos" className="mx-auto mt-12 flex max-w-xl scroll-mt-6 flex-col items-center px-1 text-center">
             <a
               href={CHECKOUT_PRINCIPAL}
               className="inline-flex w-full items-center justify-center rounded-full bg-coral px-6 py-4 text-center font-display text-base leading-tight font-extrabold tracking-wide text-white shadow-card transition-transform duration-200 hover:-translate-y-0.5 hover:brightness-105 sm:text-lg"
             >
-              QUIERO ACTÍVAMENTE KIDS
+              QUIERO ACTIVAMENTE KIDS
             </a>
             <p className="mt-3 text-xs font-semibold text-muted-foreground sm:text-sm">
               Acceso inmediato al material digital.
@@ -539,7 +544,7 @@ function Landing() {
             href={CHECKOUT_PRINCIPAL}
             className="inline-flex w-full items-center justify-center rounded-full bg-coral px-6 py-4 text-center font-display text-base leading-tight font-extrabold tracking-wide text-white shadow-card transition-transform duration-200 hover:-translate-y-0.5 hover:brightness-105 sm:text-lg"
           >
-            QUIERO ACTÍVAMENTE KIDS
+            QUIERO ACTIVAMENTE KIDS
           </a>
           <p className="mt-3 text-xs font-semibold text-muted-foreground sm:text-sm">
             Acceso inmediato al material digital.
@@ -567,8 +572,7 @@ function Landing() {
             TODO ESTO PUEDE SER TUYO HOY
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            ActivaMente Kids + 8 bonos para transformar pequeños momentos en nuevas oportunidades de aprender, pensar y
-            divertirse.
+            ActivaMente Kids + 8 bonos para transformar pequeños momentos en nuevas oportunidades de aprender, pensar y divertirse.
           </p>
         </div>
 
@@ -581,54 +585,16 @@ function Landing() {
           />
         </div>
 
-        <div className="mx-auto mt-10 max-w-2xl rounded-[2rem] bg-white p-7 shadow-card sm:p-10">
-          <div className="flex items-center justify-between gap-4 text-sm font-bold sm:text-base">
-            <span>ACTIVAMENTE KIDS</span>
-            <span>US$ 9,90</span>
-          </div>
-          <p className="my-3 text-center font-display text-xl font-extrabold text-muted-foreground">+</p>
-          <div className="flex items-center justify-between gap-4 text-sm font-bold sm:text-base">
-            <span>8 BONOS (8 × US$ 3,90)</span>
-            <span>US$ 31,20</span>
-          </div>
-
-          <hr className="my-6 border-border" />
-
-          <div className="flex items-center justify-between gap-4 text-base font-extrabold sm:text-lg">
-            <span>VALOR TOTAL DEL PACK</span>
-            <span className="line-through">US$ 41,10</span>
-          </div>
-
-          <hr className="my-6 border-border" />
-
-          <p className="text-center text-sm font-bold tracking-wide text-muted-foreground sm:text-base">
-            PERO HOY TE LLEVAS TODO POR SOLO:
-          </p>
-          <p className="mt-2 text-center font-display text-5xl leading-none font-extrabold text-coral sm:text-6xl">
-            US$ 9,90
-          </p>
-          <p className="mt-4 text-center text-xs font-semibold text-muted-foreground sm:text-sm">
-            US$ 9,90 + US$ 31,20 = US$ 41,10
-          </p>
-
-          <div className="mt-7 flex justify-center">
-            <a
-              href={CHECKOUT_PRINCIPAL}
-              className="inline-flex w-full max-w-xl items-center justify-center rounded-full bg-coral px-6 py-5 text-center font-display text-base leading-tight font-extrabold tracking-wide text-white shadow-card transition-transform duration-200 hover:-translate-y-0.5 hover:brightness-105 sm:text-xl"
-            >
-              QUIERO ACTIVAMENTE KIDS + 8 BONOS
-            </a>
-          </div>
-          <p className="mt-4 text-center text-xs font-semibold text-muted-foreground sm:text-sm">
-            Acceso digital • Material imprimible • Para niños de 3 a 14 años
-          </p>
+        <div className="mx-auto mt-6 text-center">
+          <p className="text-lg font-extrabold tracking-wide text-foreground sm:text-xl">ACTIVAMENTE KIDS</p>
+          <p className="my-1 font-display text-2xl font-extrabold text-coral">+</p>
+          <p className="text-lg font-extrabold tracking-wide text-brand sm:text-xl">🎁 8 BONOS DE REGALO</p>
         </div>
-      </section>
 
-      {/* VALOR */}
-      <section className="px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-3xl rounded-[2rem] bg-white p-7 shadow-card sm:p-10">
-          <h2 className="text-center text-2xl leading-tight font-extrabold sm:text-3xl">Todo esto por solo US$ 9,90</h2>
+        <div className="mx-auto mt-10 max-w-3xl rounded-[2rem] bg-white p-7 shadow-card sm:p-10">
+          <h2 className="text-center text-2xl leading-tight font-extrabold sm:text-3xl">
+            Todo lo que necesitas para empezar hoy
+          </h2>
           <ul className="mt-7 space-y-3">
             {[
               "Sistema ActivaMente Kids completo, con más de 100 actividades",
@@ -647,10 +613,10 @@ function Landing() {
             ))}
           </ul>
 
-          <div className="mt-8 flex flex-col items-center">
-            <p className="font-display text-5xl font-extrabold text-brand">US$ 9,90</p>
+          <div className="mt-8 flex flex-col items-center text-center">
+            <p className="font-display text-5xl font-extrabold text-brand sm:text-6xl">US$ 9,90</p>
             <p className="mt-1 text-sm font-semibold text-muted-foreground">Pago único · producto digital</p>
-            <div className="mt-6 w-full">
+            <div className="mt-6 w-full max-w-xl">
               <CtaPrincipal />
             </div>
             <MicroTextos />
@@ -687,12 +653,12 @@ function Landing() {
       {/* GARANTÍA */}
       <section className="px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-3xl grid-cols-[auto_minmax(0,1fr)] items-center gap-5 rounded-[2rem] bg-leaf-soft p-6 shadow-soft sm:gap-7 sm:p-10">
-          <span className="grid h-20 w-20 shrink-0 place-items-center rounded-full border-2 border-dashed border-leaf bg-white text-leaf sm:h-24 sm:w-24">
-            <span className="text-center font-display text-xs leading-tight font-extrabold">
-              7<br />
-              DÍAS
-            </span>
-          </span>
+          <img
+            src="/garantia-7-dias.jpg"
+            alt="Garantía de 7 días — satisfacción garantizada"
+            loading="lazy"
+            className="h-24 w-24 shrink-0 rounded-full object-contain sm:h-32 sm:w-32"
+          />
           <div className="min-w-0">
             <h2 className="text-xl font-extrabold sm:text-2xl">Garantía de 7 días</h2>
             <p className="mt-2 text-sm leading-relaxed text-foreground/80 sm:text-base">
@@ -717,32 +683,23 @@ function Landing() {
         </div>
       </section>
 
-      {/* CTA FINAL */}
-      <section className="px-4 py-16 pb-28 sm:px-6 sm:py-20 md:pb-20">
-        <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          <h2 className="text-2xl leading-tight font-extrabold text-balance sm:text-3xl lg:text-4xl">
-            Hoy puede ser el día en que jugar y aprender vuelvan a ir de la mano.
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Unos minutos al día, una hoja a la vez, y muchos momentos juntos que valen la pena.
+      {/* AVISO LEGAL + FOOTER */}
+      <section className="px-4 py-10 sm:px-6 sm:py-12">
+        <div className="mx-auto max-w-3xl text-center text-xs leading-relaxed text-muted-foreground sm:text-sm">
+          <p className="font-extrabold text-foreground">ESTE SITIO NO FORMA PARTE DE FACEBOOK:</p>
+          <p className="mt-2">
+            Este sitio no forma parte de Facebook ni de Meta Platforms, Inc. Además, este sitio no está respaldado ni patrocinado por Facebook de ninguna manera. Utilizamos cookies y tecnologías de remarketing para ofrecer una mejor experiencia y mostrar comunicaciones relevantes a personas que han visitado nuestro sitio anteriormente.
           </p>
-          <p className="mt-8 font-display text-5xl font-extrabold text-brand sm:text-6xl">US$ 9,90</p>
-          <div className="mt-6 w-full max-w-xl">
-            <CtaPrincipal />
-          </div>
-          <MicroTextos />
         </div>
 
-        <footer className="mx-auto mt-14 max-w-3xl border-t border-border pt-6 text-center text-xs leading-relaxed text-muted-foreground">
+        <footer className="mx-auto mt-10 max-w-3xl border-t border-border pt-6 text-center text-xs leading-relaxed text-muted-foreground">
           <p className="font-bold text-foreground">ActivaMente Kids — Sistema de Enfoque</p>
           <p className="mt-2">
-            Producto digital imprimible de carácter educativo y recreativo. No sustituye orientación, evaluación ni
-            acompañamiento profesional de ningún tipo.
+            Producto digital imprimible de carácter educativo y recreativo. No sustituye orientación, evaluación ni acompañamiento profesional de ningún tipo.
           </p>
         </footer>
       </section>
 
-      <FloatingCta />
     </main>
   );
 }
