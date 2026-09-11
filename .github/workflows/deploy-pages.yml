@@ -26,12 +26,12 @@ jobs:
           bun-version: latest
       - name: Install dependencies
         run: bun install --frozen-lockfile
-      - name: Decode mockup images
+      - name: Rebuild mockup images
         run: |
-          base64 --decode public/hero-mega-mockup.jpg > /tmp/hero-mega-mockup.jpg
-          mv /tmp/hero-mega-mockup.jpg public/hero-mega-mockup.jpg
-          base64 --decode public/mega-mockup-clean.jpg > /tmp/mega-mockup-clean.jpg
-          mv /tmp/mega-mockup-clean.jpg public/mega-mockup-clean.jpg
+          cat public/hero450.b64.001 public/hero450.b64.002 public/hero450.b64.003 | base64 --decode > public/hero-mega-mockup.jpg
+          cat public/lower500.b64.001 public/lower500.b64.002 public/lower500.b64.003 | base64 --decode > public/mega-mockup-clean.jpg
+          test -s public/hero-mega-mockup.jpg
+          test -s public/mega-mockup-clean.jpg
       - name: Build
         run: bun run build
       - name: Setup Pages
