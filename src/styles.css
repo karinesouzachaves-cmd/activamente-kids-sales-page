@@ -178,7 +178,11 @@
   }
 }
 
-
 html {
   scroll-behavior: smooth;
+}
+
+/* The closing-offer image is intentionally different from the hero image. */
+img[alt="ActivaMente Kids y sus 8 bonos incluidos"] {
+  content: url("/activamente-kids-sales-page/mega-mockup-clean.jpg");
 }
