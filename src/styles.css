@@ -201,3 +201,6 @@ img[alt="Bono 8 — Lectores Brillantes"] { content: url("https://raw.githubuser
 img[alt="Conversación real de una familia usando ActivaMente Kids (1)"] { content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/prova-social-%201.jpg"); }
 img[alt="Conversación real de una familia usando ActivaMente Kids (2)"] { content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/prova%20social%202.jpg"); }
 img[alt="Conversación real de una familia usando ActivaMente Kids (3)"] { content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/prova%20social%203.jpg"); }
+
+/* Uploaded ActivaMente Kids main cover */
+img[alt="Portada del libro de actividades ActivaMente Kids"] { content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/CAPA%20ACTIVA%20reduzida.jpg"); }
