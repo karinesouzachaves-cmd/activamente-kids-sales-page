@@ -184,5 +184,5 @@ html {
 
 /* The closing-offer image is intentionally different from the hero image. */
 img[alt="ActivaMente Kids y sus 8 bonos incluidos"] {
-  content: url("/activamente-kids-sales-page/mega-mockup-clean.jpg");
+  content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/mega%20mockup%20fundo%20limpo.png");
 }
