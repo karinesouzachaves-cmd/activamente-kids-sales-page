@@ -138,6 +138,25 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
+  useEffect(() => {
+    const handleCheckoutClick = (event: MouseEvent) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const link = target.closest<HTMLAnchorElement>('a[href*="pay.hotmart.com/U107544927E"]');
+      if (!link) return;
+
+      const metaWindow = window as typeof window & {
+        fbq?: (...args: unknown[]) => void;
+      };
+
+      metaWindow.fbq?.("track", "InitiateCheckout");
+    };
+
+    document.addEventListener("click", handleCheckoutClick);
+    return () => document.removeEventListener("click", handleCheckoutClick);
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
