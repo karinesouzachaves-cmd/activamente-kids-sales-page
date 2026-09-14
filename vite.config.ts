@@ -8,7 +8,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   vite: {
-    base: "/activamente-kids-sales-page/",
+    base: "/",
   },
   tanstackStart: {
     // Generate static HTML so the app can be hosted on GitHub Pages.
