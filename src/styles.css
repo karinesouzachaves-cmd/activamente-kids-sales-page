@@ -109,7 +109,7 @@
   --sidebar-accent: oklch(0.968 0.007 247.896);
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
 
   --brand: oklch(0.58 0.16 250);
   --brand-foreground: oklch(0.99 0.005 250);
@@ -154,7 +154,7 @@
   --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
   --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
@@ -196,3 +196,8 @@ img[alt="Bono 5 — Navidad Creativa"] { content: url("https://raw.githubusercon
 img[alt="Bono 6 — Mi Libro de Hoy"] { content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/bonus-6.png"); }
 img[alt="Bono 7 — ¡Encuentra al Intruso!"] { content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/bonus-7.png"); }
 img[alt="Bono 8 — Lectores Brillantes"] { content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/bonus-8.png"); }
+
+/* Uploaded social proof images */
+img[alt="Conversación real de una familia usando ActivaMente Kids (1)"] { content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/prova-social-1.png"); }
+img[alt="Conversación real de una familia usando ActivaMente Kids (2)"] { content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/prova-social-2.png"); }
+img[alt="Conversación real de una familia usando ActivaMente Kids (3)"] { content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/prova-social-3.png"); }
