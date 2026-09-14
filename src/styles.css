@@ -205,5 +205,26 @@ img[alt="Conversación real de una familia usando ActivaMente Kids (3)"] { conte
 /* Uploaded ActivaMente Kids main cover */
 img[alt="Portada del libro de actividades ActivaMente Kids"] { content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/CAPA%20ACTIVA%20reduzida.jpg"); }
 
-/* Uploaded 7-day guarantee seal */
-img[alt="Garantía de 7 días — satisfacción garantizada"] { content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/garantia.jpg"); }
+/* Guarantee: replace broken image element with uploaded seal */
+div:has(> img[alt="Garantía de 7 días — satisfacción garantizada"]) > img[alt="Garantía de 7 días — satisfacción garantizada"] {
+  display: none;
+}
+
+div:has(> img[alt="Garantía de 7 días — satisfacción garantizada"])::before {
+  content: "";
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  flex: 0 0 auto;
+  background-image: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/garantia.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 640px) {
+  div:has(> img[alt="Garantía de 7 días — satisfacción garantizada"])::before {
+    width: 8rem;
+    height: 8rem;
+  }
+}
