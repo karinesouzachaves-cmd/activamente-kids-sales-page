@@ -186,3 +186,13 @@ html {
 img[alt="ActivaMente Kids y sus 8 bonos incluidos"] {
   content: url("https://raw.githubusercontent.com/karinesouzachaves-cmd/activamente-kids-sales-page/main/src/assets/mega%20mockup%20fundo%20limpo.png");
 }
+
+/* Uploaded bonus covers */
+img[alt="Bono 1 — Mi Momento Consciente"] { content: url("./CAPA Bônus 1 — Mi Momento Consciente.png"); }
+img[alt="Bono 2 — Calma en Acción"] { content: url("./CAPA Bônus 2 — Calma en Acción.png"); }
+img[alt="Bono 3 — Mi Pequeño Planificador"] { content: url("./CAPA Bônus 3 — Mi Pequeño Planificador.png"); }
+img[alt="Bono 4 — Mi Diario de Fe y Gratitud"] { content: url("./CAPA Bônus 4 — Mi Diario de Fe y Gratitud.png"); }
+img[alt="Bono 5 — Navidad Creativa"] { content: url("./CAPA Bônus 5 — Navidad Creativa.png"); }
+img[alt="Bono 6 — Mi Libro de Hoy"] { content: url("./CAPA Bônus 6 — Mi Libro de Hoy.png"); }
+img[alt="Bono 7 — ¡Encuentra al Intruso!"] { content: url("./CAPA Bônus 7 — ¡Encuentra al Intruso!.png"); }
+img[alt="Bono 8 — Lectores Brillantes"] { content: url("./CAP Bono 8 — Lectores Brillantes.png"); }
